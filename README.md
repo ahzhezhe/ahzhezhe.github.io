@@ -14,4 +14,4 @@
 [v4](https://ahzhezhe.github.io/docs/terraform-generator-v4/index.html)
 
 ## **form-studio**
-[v0.1](https://ahzhezhe.github.io/docs/form-studio-v0.1/index.html)
+[v0.0](https://ahzhezhe.github.io/docs/form-studio-v0.0/index.html)

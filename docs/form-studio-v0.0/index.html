@@ -1,0 +1,536 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>form-studio - v0.0</title>
+	<meta name="description" content="Documentation for form-studio - v0.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+	<script async src="assets/js/search.js" id="search-script"></script>
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.json" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="index.html" class="title">form-studio - v0.0</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<h1>form-studio - v0.0</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="tsd-panel tsd-typography">
+				<a href="#form-studio" id="form-studio" style="color: inherit; text-decoration: none;">
+					<h1><strong>form-studio</strong></h1>
+				</a>
+				<p><a href="https://www.npmjs.com/package/form-studio"><img src="https://img.shields.io/npm/v/form-studio" alt="npm package"></a>
+					<a href="https://www.npmjs.com/package/form-studio"><img src="https://img.shields.io/npm/dt/form-studio" alt="npm downloads"></a>
+					<a href="https://github.com/ahzhezhe/form-studio"><img src="https://github.com/ahzhezhe/form-studio/workflows/test/badge.svg?branch=master" alt="GitHub test"></a>
+					<a href="https://github.com/ahzhezhe/form-studio/issues"><img src="https://img.shields.io/github/issues/ahzhezhe/form-studio" alt="GitHub issues"></a>
+				<a href="https://github.com/ahzhezhe/form-studio/blob/master/LICENSE"><img src="https://img.shields.io/github/license/ahzhezhe/form-studio" alt="GitHub license"></a></p>
+				<a href="#what-is-form-studio" id="what-is-form-studio" style="color: inherit; text-decoration: none;">
+					<h2><strong>What is form-studio?</strong></h2>
+				</a>
+				<p>It is a tool that helps design, create and manage form / survey / questionnaire through simple JSON configurations.</p>
+				<p>It provides:</p>
+				<ul>
+					<li>Data structure for form configurations and answers.</li>
+					<li>Conditionally disabling/enabling questions based on choices made in another question.</li>
+					<li>Answer validation mechanism.</li>
+					<li>Instructions for rendering the UI based on current status of the form.</li>
+				</ul>
+				<p>It does not provide:</p>
+				<ul>
+					<li>Any UI components, define your own UI configurations that suit your project needs and render the UI according to your own design system.</li>
+					<li>Validators, define your own validators that suit your project needs.</li>
+				</ul>
+				<p><a href="https://ahzhezhe.github.io/docs/form-studio-v0.1/index.html">API Documentation</a></p>
+				<br />
+				<a href="#install-via-npm" id="install-via-npm" style="color: inherit; text-decoration: none;">
+					<h2><strong>Install via NPM</strong></h2>
+				</a>
+				<pre><code><span style="color: #001080">npm</span><span style="color: #000000"> </span><span style="color: #001080">install</span><span style="color: #000000"> </span><span style="color: #001080">form</span><span style="color: #000000">-</span><span style="color: #001080">studio</span>
+</code></pre>
+				<br />
+				<a href="#import" id="import" style="color: inherit; text-decoration: none;">
+					<h2><strong>Import</strong></h2>
+				</a>
+				<pre><code class="language-javascript"><span style="color: #AF00DB">import</span><span style="color: #000000"> </span><span style="color: #001080">Form</span><span style="color: #000000"> </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;form-studio&#039;</span><span style="color: #000000">;</span>
+</code></pre>
+				<p>or</p>
+				<pre><code class="language-javascript"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">FormStudio</span><span style="color: #000000"> = </span><span style="color: #795E26">require</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;form-studio&#039;</span><span style="color: #000000">);</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> { </span><span style="color: #001080">default</span><span style="color: #000000">: </span><span style="color: #0070C1">Form</span><span style="color: #000000"> } = </span><span style="color: #001080">FormStudio</span><span style="color: #000000">;</span>
+</code></pre>
+				<br />
+				<a href="#form-configs" id="form-configs" style="color: inherit; text-decoration: none;">
+					<h1><strong>Form Configs</strong></h1>
+				</a>
+				<p>Form configs is the definition of the form. It should be persisted somewhere (e.g. database) so that it can be reused later.</p>
+				<p>There are 3 types of items in a configs: <code>Group</code>, <code>Question</code> and <code>Choice</code>.</p>
+				<p>Each of them has the following properties:</p>
+				<ul>
+					<li><code>id</code>: An unique id to identify the item</li>
+					<li><code>order</code>: Sort order of the item among it&#39;s parent</li>
+					<li><code>defaultDisabled</code>: To indicate that the item is disabled by default</li>
+					<li><code>ui</code>: Any values that help you determine on how to render the frontend UI for this item, it should contain minimal but useful information, e.g. title, placeholder</li>
+				</ul>
+				<a href="#group" id="group" style="color: inherit; text-decoration: none;">
+					<h3><strong>Group</strong></h3>
+				</a>
+				<p>A group is a logical grouping of a set of questions.</p>
+				<p>A form needs at least 1 group.</p>
+				<p>Groups can also have sub-groups.</p>
+				<a href="#question" id="question" style="color: inherit; text-decoration: none;">
+					<h3><strong>Question</strong></h3>
+				</a>
+				<p>There are 3 types of questions: <code>any</code>, <code>single</code> and <code>multiple</code>.</p>
+				<p>A question comes with an answer (could be undefined if it is unanswered) and an error (could be undefined if it is unanswered, unvalidated or passed validation).</p>
+				<p><code>any</code> questions accept <code>any</code> value as an answer.</p>
+				<p><code>single</code> questions accept a choice value as an answer.</p>
+				<p><code>multiple</code> questions accept a list of choice values as an answer.</p>
+				<p><code>single</code> and <code>multiple</code> questions need to have 1 or more choices.</p>
+				<p>You can also define the validators to be used by a question to validate its answer.</p>
+				<a href="#choice" id="choice" style="color: inherit; text-decoration: none;">
+					<h3><strong>Choice</strong></h3>
+				</a>
+				<p>Choices are for <code>single</code> or <code>multiple</code> questions.</p>
+				<p>A choice comes with a value. Value of the choices will be the answer of the question.</p>
+				<p>A choice has the ability to disable/enable other groups/questions/choices when it&#39;s selected/unselected.</p>
+				<a href="#example" id="example" style="color: inherit; text-decoration: none;">
+					<h3><strong>Example</strong></h3>
+				</a>
+				<p>The following example consists of 1 group and 2 questions under it.</p>
+				<p>The second question is disabled by default. If &#39;yes&#39; is selected for the first question, the second question will be enabled.</p>
+				<pre><code class="language-json"><span style="color: #000000">[</span>
+<span style="color: #000000">  {</span>
+<span style="color: #000000">    </span><span style="color: #0451A5">&quot;questions&quot;</span><span style="color: #000000">: [</span>
+<span style="color: #000000">      {</span>
+<span style="color: #000000">        </span><span style="color: #0451A5">&quot;id&quot;</span><span style="color: #000000">: </span><span style="color: #A31515">&quot;proceed&quot;</span><span style="color: #000000">,</span>
+<span style="color: #000000">        </span><span style="color: #0451A5">&quot;type&quot;</span><span style="color: #000000">: </span><span style="color: #A31515">&quot;single&quot;</span><span style="color: #000000">,</span>
+<span style="color: #000000">        </span><span style="color: #0451A5">&quot;ui&quot;</span><span style="color: #000000">: {</span>
+<span style="color: #000000">          </span><span style="color: #0451A5">&quot;title&quot;</span><span style="color: #000000">: </span><span style="color: #A31515">&quot;Would you like to proceed?&quot;</span>
+<span style="color: #000000">        },</span>
+<span style="color: #000000">        </span><span style="color: #0451A5">&quot;choices&quot;</span><span style="color: #000000">: [</span>
+<span style="color: #000000">          {</span>
+<span style="color: #000000">            </span><span style="color: #0451A5">&quot;value&quot;</span><span style="color: #000000">: </span><span style="color: #A31515">&quot;yes&quot;</span><span style="color: #000000">,</span>
+<span style="color: #000000">            </span><span style="color: #0451A5">&quot;ui&quot;</span><span style="color: #000000">: {</span>
+<span style="color: #000000">              </span><span style="color: #0451A5">&quot;title&quot;</span><span style="color: #000000">: </span><span style="color: #A31515">&quot;Yes&quot;</span>
+<span style="color: #000000">            },</span>
+<span style="color: #000000">            </span><span style="color: #0451A5">&quot;onSelected&quot;</span><span style="color: #000000">: {</span>
+<span style="color: #000000">              </span><span style="color: #0451A5">&quot;enable&quot;</span><span style="color: #000000">: [</span>
+<span style="color: #000000">                </span><span style="color: #A31515">&quot;name&quot;</span>
+<span style="color: #000000">              ]</span>
+<span style="color: #000000">            }</span>
+<span style="color: #000000">          },</span>
+<span style="color: #000000">          {</span>
+<span style="color: #000000">            </span><span style="color: #0451A5">&quot;value&quot;</span><span style="color: #000000">: </span><span style="color: #A31515">&quot;no&quot;</span><span style="color: #000000">,</span>
+<span style="color: #000000">            </span><span style="color: #0451A5">&quot;ui&quot;</span><span style="color: #000000">: {</span>
+<span style="color: #000000">              </span><span style="color: #0451A5">&quot;title&quot;</span><span style="color: #000000">: </span><span style="color: #A31515">&quot;No&quot;</span>
+<span style="color: #000000">            }</span>
+<span style="color: #000000">          }</span>
+<span style="color: #000000">        ],</span>
+<span style="color: #000000">      },</span>
+<span style="color: #000000">      {</span>
+<span style="color: #000000">        </span><span style="color: #0451A5">&quot;id&quot;</span><span style="color: #000000">: </span><span style="color: #A31515">&quot;name&quot;</span><span style="color: #000000">,</span>
+<span style="color: #000000">        </span><span style="color: #0451A5">&quot;defaultDisabled&quot;</span><span style="color: #000000">: </span><span style="color: #0000FF">true</span><span style="color: #000000">,</span>
+<span style="color: #000000">        </span><span style="color: #0451A5">&quot;type&quot;</span><span style="color: #000000">: </span><span style="color: #A31515">&quot;any&quot;</span><span style="color: #000000">,</span>
+<span style="color: #000000">        </span><span style="color: #0451A5">&quot;ui&quot;</span><span style="color: #000000">: {</span>
+<span style="color: #000000">          </span><span style="color: #0451A5">&quot;type&quot;</span><span style="color: #000000">: </span><span style="color: #A31515">&quot;string&quot;</span><span style="color: #000000">,</span>
+<span style="color: #000000">          </span><span style="color: #0451A5">&quot;title&quot;</span><span style="color: #000000">: </span><span style="color: #A31515">&quot;What is you name?&quot;</span><span style="color: #000000">,</span>
+<span style="color: #000000">        },</span>
+<span style="color: #000000">      }</span>
+<span style="color: #000000">    ]</span>
+<span style="color: #000000">  }</span>
+<span style="color: #000000">]</span>
+</code></pre>
+				<br />
+				<a href="#validators" id="validators" style="color: inherit; text-decoration: none;">
+					<h1><strong>Validators</strong></h1>
+				</a>
+				<p><code>form-studio</code> doesn&#39;t come with any predefined validator. You need to define your own validators according to your project needs.</p>
+				<p>A validator is a function that will be called when the answer of a question is updated, it throws <code>Error</code> when validation fails.</p>
+				<p>Each question can be assigned with a name of the validator to be used and a set of validation configs to be used by the validator.</p>
+				<a href="#example-1" id="example-1" style="color: inherit; text-decoration: none;">
+					<h3><strong>Example</strong></h3>
+				</a>
+				<pre><code class="language-javascript"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">validators</span><span style="color: #000000"> = {</span>
+<span style="color: #000000">  </span><span style="color: #795E26">atLeast1</span><span style="color: #001080">:</span><span style="color: #000000"> </span><span style="color: #001080">answer</span><span style="color: #000000"> </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
+<span style="color: #000000">    </span><span style="color: #AF00DB">if</span><span style="color: #000000"> (</span><span style="color: #001080">answer</span><span style="color: #000000">.</span><span style="color: #001080">length</span><span style="color: #000000"> &lt; </span><span style="color: #098658">1</span><span style="color: #000000">) {</span>
+<span style="color: #000000">      </span><span style="color: #AF00DB">throw</span><span style="color: #000000"> </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #267F99">Error</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;Please select at least 1 option.&#039;</span><span style="color: #000000">);</span>
+<span style="color: #000000">    }</span>
+<span style="color: #000000">  },</span>
+
+<span style="color: #000000">  </span><span style="color: #795E26">notNull</span><span style="color: #001080">:</span><span style="color: #000000"> </span><span style="color: #001080">answer</span><span style="color: #000000"> </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
+<span style="color: #000000">    </span><span style="color: #AF00DB">if</span><span style="color: #000000"> (!</span><span style="color: #001080">answer</span><span style="color: #000000">) {</span>
+<span style="color: #000000">      </span><span style="color: #AF00DB">throw</span><span style="color: #000000"> </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #267F99">Error</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;This question cannot be left unanswered.&#039;</span><span style="color: #000000">);</span>
+<span style="color: #000000">    }</span>
+<span style="color: #000000">  },</span>
+
+<span style="color: #000000">  </span><span style="color: #795E26">number</span><span style="color: #001080">:</span><span style="color: #000000"> (</span><span style="color: #001080">answer</span><span style="color: #000000">, </span><span style="color: #001080">validation</span><span style="color: #000000">) </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
+<span style="color: #000000">    </span><span style="color: #0000FF">const</span><span style="color: #000000"> { </span><span style="color: #0070C1">min</span><span style="color: #000000">, </span><span style="color: #0070C1">max</span><span style="color: #000000"> } = </span><span style="color: #001080">validation</span><span style="color: #000000">;</span>
+<span style="color: #000000">    </span><span style="color: #AF00DB">if</span><span style="color: #000000"> (</span><span style="color: #001080">answer</span><span style="color: #000000"> &lt; </span><span style="color: #001080">min</span><span style="color: #000000">){</span>
+<span style="color: #000000">      </span><span style="color: #AF00DB">throw</span><span style="color: #000000"> </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #267F99">Error</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;Please enter no less than &#039;</span><span style="color: #000000"> + </span><span style="color: #001080">min</span><span style="color: #000000"> + </span><span style="color: #A31515">&#039;.&#039;</span><span style="color: #000000">);</span>
+<span style="color: #000000">    }</span>
+<span style="color: #000000">    </span><span style="color: #AF00DB">if</span><span style="color: #000000"> (</span><span style="color: #001080">answer</span><span style="color: #000000"> &gt; </span><span style="color: #001080">max</span><span style="color: #000000">){</span>
+<span style="color: #000000">      </span><span style="color: #AF00DB">throw</span><span style="color: #000000"> </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #267F99">Error</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;Please enter no greater than &#039;</span><span style="color: #000000"> + </span><span style="color: #001080">max</span><span style="color: #000000"> + </span><span style="color: #A31515">&#039;.&#039;</span><span style="color: #000000">);</span>
+<span style="color: #000000">    }</span>
+<span style="color: #000000">  }</span>
+<span style="color: #000000">};</span>
+</code></pre>
+				<br />
+				<a href="#form-update-listener" id="form-update-listener" style="color: inherit; text-decoration: none;">
+					<h1><strong>Form Update Listener</strong></h1>
+				</a>
+				<p>A listener function that will be called when form is updated.</p>
+				<p>Form will be updated when answer is set, validation is triggered, etc.</p>
+				<p>Usually form updated listener is only needed when the form is being used in frontend, so that you can trigger an UI rerender when form is updated.</p>
+				<a href="#example-react" id="example-react" style="color: inherit; text-decoration: none;">
+					<h3><strong>Example (React)</strong></h3>
+				</a>
+				<pre><code class="language-javascript"><span style="color: #0000FF">const</span><span style="color: #000000"> [</span><span style="color: #0070C1">renderInstructions</span><span style="color: #000000">, </span><span style="color: #0070C1">setRenderInstructions</span><span style="color: #000000">] = </span><span style="color: #795E26">useState</span><span style="color: #000000">();</span>
+
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #795E26">onFormUpdate</span><span style="color: #000000"> = </span><span style="color: #001080">form</span><span style="color: #000000"> </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> </span><span style="color: #795E26">setRenderInstructions</span><span style="color: #000000">(</span><span style="color: #001080">form</span><span style="color: #000000">.</span><span style="color: #795E26">getRenderInstructions</span><span style="color: #000000">());</span>
+</code></pre>
+				<br />
+				<a href="#construct-a-form-with-configs-amp-validators" id="construct-a-form-with-configs-amp-validators" style="color: inherit; text-decoration: none;">
+					<h1><strong>Construct a Form with Configs &amp; Validators</strong></h1>
+				</a>
+				<pre><code class="language-javascript"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">form</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #795E26">Form</span><span style="color: #000000">(</span><span style="color: #001080">configs</span><span style="color: #000000">, </span><span style="color: #001080">validators</span><span style="color: #000000">, </span><span style="color: #001080">onFormUpdate</span><span style="color: #000000">);</span>
+</code></pre>
+				<br />
+				<a href="#render-instructions" id="render-instructions" style="color: inherit; text-decoration: none;">
+					<h1><strong>Render Instructions</strong></h1>
+				</a>
+				<p>Render instructions can be get by calling <code>getRenderInstructions</code> method.</p>
+				<p>It is a set of instructions that tell you how the form should look like.</p>
+				<p>Each item in the instructions comes with the following properties:</p>
+				<ul>
+					<li><code>id</code>: An unique id to identify the item</li>
+					<li><code>disabled</code>: Whether or not this item is disabled, you should handle it in the UI, e.g. hide or grey out disabled item</li>
+					<li><code>ui</code>: The exact same values that you specified in the form configs</li>
+				</ul>
+				<p>Questions also come with the following important properties that you will need to determine the UI:</p>
+				<ul>
+					<li><code>type</code>:<ul>
+							<li><code>any</code>: render whatever UI that is required based on your custom <code>ui</code> config, e.g. if <code>ui.inputType</code> is <code>string</code>, then a simple text input is rendered</li>
+							<li><code>single</code>: render UI that allows user to select 1 option from a list of options, e.g. select, radio button group</li>
+							<li><code>multiple</code>: render UI that allows user to select multiple options from a list of options, e.g. check box group</li>
+						</ul>
+					</li>
+					<li><code>currentAnswer</code>: current answer of the question, it is unvalidated and might not be valid, but you will still need to show them on UI</li>
+					<li><code>validatedAnswer</code>: validated answer</li>
+					<li><code>validating</code>: whether or not the question is currently being validating, it could happen if the validator used is an aysnc function, you might want to show a spinner or some other indicator on UI</li>
+					<li><code>error</code>: error message for question which failed validation</li>
+				</ul>
+				<a href="#example-react-1" id="example-react-1" style="color: inherit; text-decoration: none;">
+					<h3><strong>Example (React)</strong></h3>
+				</a>
+				<pre><code class="language-javascript"><span style="color: #0000FF">let</span><span style="color: #000000"> </span><span style="color: #001080">form</span><span style="color: #000000">: </span><span style="color: #267F99">Form</span><span style="color: #000000">;</span>
+
+<span style="color: #AF00DB">export</span><span style="color: #000000"> </span><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #795E26">SurveyPage</span><span style="color: #000000"> = () </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
+<span style="color: #000000">  </span><span style="color: #0000FF">const</span><span style="color: #000000"> [</span><span style="color: #0070C1">renderInstructions</span><span style="color: #000000">, </span><span style="color: #0070C1">setRenderInstructions</span><span style="color: #000000">] = </span><span style="color: #795E26">useState</span><span style="color: #000000">&lt;</span><span style="color: #267F99">GroupRenderInstructions</span><span style="color: #000000">[]&gt;([]);</span>
+
+<span style="color: #000000">  </span><span style="color: #795E26">useEffect</span><span style="color: #000000">(() </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
+<span style="color: #000000">    </span><span style="color: #001080">form</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #795E26">Form</span><span style="color: #000000">(</span><span style="color: #001080">configs</span><span style="color: #000000">, </span><span style="color: #001080">validators</span><span style="color: #000000">, </span><span style="color: #0000FF">true</span><span style="color: #000000">, </span><span style="color: #001080">form</span><span style="color: #000000"> </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> </span><span style="color: #795E26">setRenderInstructions</span><span style="color: #000000">(</span><span style="color: #001080">form</span><span style="color: #000000">.</span><span style="color: #795E26">getRenderInstructions</span><span style="color: #000000">()));</span>
+<span style="color: #000000">  }, []);</span>
+
+<span style="color: #000000">  </span><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #795E26">renderQuestion</span><span style="color: #000000"> = (</span><span style="color: #001080">question</span><span style="color: #000000">: </span><span style="color: #267F99">QuestionRenderInstructions</span><span style="color: #000000">) </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
+<span style="color: #000000">    </span><span style="color: #0000FF">const</span><span style="color: #000000"> { </span><span style="color: #0070C1">disabled</span><span style="color: #000000">, </span><span style="color: #0070C1">type</span><span style="color: #000000">, </span><span style="color: #0070C1">ui</span><span style="color: #000000"> } = </span><span style="color: #001080">question</span><span style="color: #000000">;</span>
+<span style="color: #000000">    </span><span style="color: #AF00DB">if</span><span style="color: #000000"> (</span><span style="color: #001080">disabled</span><span style="color: #000000">) {</span>
+<span style="color: #000000">      </span><span style="color: #AF00DB">return</span><span style="color: #000000"> </span><span style="color: #0000FF">null</span><span style="color: #000000">;</span>
+<span style="color: #000000">    }</span>
+<span style="color: #000000">    </span><span style="color: #AF00DB">if</span><span style="color: #000000"> (</span><span style="color: #001080">type</span><span style="color: #000000"> === </span><span style="color: #A31515">&#039;any&#039;</span><span style="color: #000000">) {</span>
+<span style="color: #000000">      </span><span style="color: #AF00DB">return</span><span style="color: #000000"> (</span>
+<span style="color: #000000">        </span><span style="color: #800000">&lt;&gt;</span>
+<span style="color: #000000">          </span><span style="color: #0000FF">{</span><span style="color: #001080">ui</span><span style="color: #000000FF">.</span><span style="color: #001080">inputType</span><span style="color: #000000FF"> </span><span style="color: #000000">===</span><span style="color: #000000FF"> </span><span style="color: #A31515">&#039;string&#039;</span><span style="color: #000000FF"> </span><span style="color: #000000">&amp;&amp;</span><span style="color: #000000FF"> </span><span style="color: #795E26">renderStringInput</span><span style="color: #000000FF">(</span><span style="color: #001080">question</span><span style="color: #000000FF">)</span><span style="color: #0000FF">}</span>
+<span style="color: #000000">        </span><span style="color: #800000">&lt;/&gt;</span>
+<span style="color: #000000">      );</span>
+<span style="color: #000000">    }</span>
+<span style="color: #000000">    </span><span style="color: #AF00DB">if</span><span style="color: #000000"> (</span><span style="color: #001080">type</span><span style="color: #000000"> === </span><span style="color: #A31515">&#039;single&#039;</span><span style="color: #000000">) {</span>
+<span style="color: #000000">      </span><span style="color: #AF00DB">return</span><span style="color: #000000"> </span><span style="color: #795E26">renderRadioGroup</span><span style="color: #000000">(</span><span style="color: #001080">question</span><span style="color: #000000">);</span>
+<span style="color: #000000">    }</span>
+<span style="color: #000000">    </span><span style="color: #AF00DB">if</span><span style="color: #000000"> (</span><span style="color: #001080">type</span><span style="color: #000000"> === </span><span style="color: #A31515">&#039;multiple&#039;</span><span style="color: #000000">) {</span>
+<span style="color: #000000">      </span><span style="color: #AF00DB">return</span><span style="color: #000000"> </span><span style="color: #795E26">renderCheckBoxGroup</span><span style="color: #000000">(</span><span style="color: #001080">question</span><span style="color: #000000">);</span>
+<span style="color: #000000">    }</span>
+<span style="color: #000000">  };</span>
+
+<span style="color: #000000">  </span><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #795E26">renderRadioGroup</span><span style="color: #000000"> = (</span><span style="color: #001080">question</span><span style="color: #000000">: </span><span style="color: #267F99">QuestionRenderInstructions</span><span style="color: #000000">) </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
+<span style="color: #000000">    </span><span style="color: #0000FF">const</span><span style="color: #000000"> { </span><span style="color: #0070C1">id</span><span style="color: #000000">, </span><span style="color: #0070C1">choices</span><span style="color: #000000">, </span><span style="color: #0070C1">error</span><span style="color: #000000">, </span><span style="color: #0070C1">currentAnswer</span><span style="color: #000000"> } = </span><span style="color: #001080">question</span><span style="color: #000000">;</span>
+<span style="color: #000000">    </span><span style="color: #AF00DB">return</span><span style="color: #000000"> (</span>
+<span style="color: #000000">      </span><span style="color: #800000">&lt;</span><span style="color: #267F99">Radio</span>
+<span style="color: #000000">        </span><span style="color: #FF0000">error</span><span style="color: #000000">=</span><span style="color: #0000FF">{</span><span style="color: #001080">error</span><span style="color: #0000FF">}</span>
+<span style="color: #000000">        </span><span style="color: #FF0000">value</span><span style="color: #000000">=</span><span style="color: #0000FF">{</span><span style="color: #001080">currentAnswer</span><span style="color: #0000FF">}</span>
+<span style="color: #000000">        </span><span style="color: #FF0000">onChange</span><span style="color: #000000">=</span><span style="color: #0000FF">{</span><span style="color: #001080">e</span><span style="color: #000000FF"> </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000FF"> </span><span style="color: #001080">form</span><span style="color: #000000FF">.</span><span style="color: #795E26">setChoice</span><span style="color: #000000FF">(</span><span style="color: #001080">id</span><span style="color: #000000FF">, </span><span style="color: #001080">e</span><span style="color: #000000FF">.</span><span style="color: #001080">target</span><span style="color: #000000FF">.</span><span style="color: #001080">value</span><span style="color: #000000FF">)</span><span style="color: #0000FF">}</span><span style="color: #800000">&gt;</span>
+<span style="color: #000000">        </span><span style="color: #0000FF">{</span><span style="color: #001080">choices</span><span style="color: #000000">!</span><span style="color: #000000FF">.</span><span style="color: #795E26">map</span><span style="color: #000000FF">(</span><span style="color: #001080">choice</span><span style="color: #000000FF"> </span><span style="color: #0000FF">=&gt;</span>
+<span style="color: #000000FF">          </span><span style="color: #800000">&lt;</span><span style="color: #267F99">RadioOption</span>
+<span style="color: #000000FF">            </span><span style="color: #FF0000">value</span><span style="color: #000000">=</span><span style="color: #0000FF">{</span><span style="color: #001080">choice</span><span style="color: #000000FF">.</span><span style="color: #001080">value</span><span style="color: #0000FF">}</span>
+<span style="color: #000000FF">            </span><span style="color: #FF0000">disabled</span><span style="color: #000000">=</span><span style="color: #0000FF">{</span><span style="color: #001080">choice</span><span style="color: #000000FF">.</span><span style="color: #001080">disabled</span><span style="color: #0000FF">}</span><span style="color: #800000">&gt;</span>
+<span style="color: #000000FF">            </span><span style="color: #0000FF">{</span><span style="color: #001080">choice</span><span style="color: #000000FF">.</span><span style="color: #001080">ui</span><span style="color: #000000FF">.</span><span style="color: #001080">title</span><span style="color: #0000FF">}</span>
+<span style="color: #000000FF">          </span><span style="color: #800000">&lt;/</span><span style="color: #267F99">RadioOption</span><span style="color: #800000">&gt;</span>
+<span style="color: #000000FF">        )</span><span style="color: #0000FF">}</span>
+<span style="color: #000000">      </span><span style="color: #800000">&lt;/</span><span style="color: #267F99">Radio</span><span style="color: #800000">&gt;</span>
+<span style="color: #000000">    );</span>
+<span style="color: #000000">  };</span>
+
+<span style="color: #000000">  </span><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #795E26">renderCheckBoxGroup</span><span style="color: #000000"> = (</span><span style="color: #001080">question</span><span style="color: #000000">: </span><span style="color: #267F99">QuestionRenderInstructions</span><span style="color: #000000">) </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
+<span style="color: #000000">    </span><span style="color: #0000FF">const</span><span style="color: #000000"> { </span><span style="color: #0070C1">id</span><span style="color: #000000">, </span><span style="color: #0070C1">choices</span><span style="color: #000000">, </span><span style="color: #0070C1">error</span><span style="color: #000000">, </span><span style="color: #0070C1">currentAnswer</span><span style="color: #000000"> } = </span><span style="color: #001080">question</span><span style="color: #000000">;</span>
+<span style="color: #000000">    </span><span style="color: #AF00DB">return</span><span style="color: #000000"> (</span>
+<span style="color: #000000">      </span><span style="color: #800000">&lt;</span><span style="color: #267F99">CheckBoxGroup</span>
+<span style="color: #000000">        </span><span style="color: #FF0000">error</span><span style="color: #000000">=</span><span style="color: #0000FF">{</span><span style="color: #001080">error</span><span style="color: #0000FF">}</span>
+<span style="color: #000000">        </span><span style="color: #FF0000">value</span><span style="color: #000000">=</span><span style="color: #0000FF">{</span><span style="color: #001080">currentAnswer</span><span style="color: #0000FF">}</span>
+<span style="color: #000000">        </span><span style="color: #FF0000">onChange</span><span style="color: #000000">=</span><span style="color: #0000FF">{</span><span style="color: #001080">answer</span><span style="color: #000000FF"> </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000FF"> </span><span style="color: #001080">form</span><span style="color: #000000FF">.</span><span style="color: #795E26">setChoices</span><span style="color: #000000FF">(</span><span style="color: #001080">id</span><span style="color: #000000FF">, </span><span style="color: #001080">answer</span><span style="color: #000000FF"> </span><span style="color: #AF00DB">as</span><span style="color: #000000FF"> </span><span style="color: #267F99">any</span><span style="color: #000000FF">[])</span><span style="color: #0000FF">}</span><span style="color: #800000">&gt;</span>
+<span style="color: #000000">        </span><span style="color: #0000FF">{</span><span style="color: #001080">choices</span><span style="color: #000000">!</span><span style="color: #000000FF">.</span><span style="color: #795E26">map</span><span style="color: #000000FF">(</span><span style="color: #001080">choice</span><span style="color: #000000FF"> </span><span style="color: #0000FF">=&gt;</span>
+<span style="color: #000000FF">          </span><span style="color: #800000">&lt;</span><span style="color: #267F99">CheckBox</span>
+<span style="color: #000000FF">            </span><span style="color: #FF0000">value</span><span style="color: #000000">=</span><span style="color: #0000FF">{</span><span style="color: #001080">choice</span><span style="color: #000000FF">.</span><span style="color: #001080">value</span><span style="color: #0000FF">}</span>
+<span style="color: #000000FF">            </span><span style="color: #FF0000">disabled</span><span style="color: #000000">=</span><span style="color: #0000FF">{</span><span style="color: #001080">choice</span><span style="color: #000000FF">.</span><span style="color: #001080">disabled</span><span style="color: #0000FF">}</span><span style="color: #800000">&gt;</span>
+<span style="color: #000000FF">            </span><span style="color: #0000FF">{</span><span style="color: #001080">choice</span><span style="color: #000000FF">.</span><span style="color: #001080">ui</span><span style="color: #000000FF">.</span><span style="color: #001080">title</span><span style="color: #0000FF">}</span>
+<span style="color: #000000FF">          </span><span style="color: #800000">&lt;/</span><span style="color: #267F99">CheckBox</span><span style="color: #800000">&gt;</span>
+<span style="color: #000000FF">        )</span><span style="color: #0000FF">}</span>
+<span style="color: #000000">      </span><span style="color: #800000">&lt;/</span><span style="color: #267F99">CheckBoxGroup</span><span style="color: #800000">&gt;</span>
+<span style="color: #000000">    );</span>
+<span style="color: #000000">  };</span>
+
+<span style="color: #000000">  </span><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #795E26">renderStringInput</span><span style="color: #000000"> = (</span><span style="color: #001080">question</span><span style="color: #000000">: </span><span style="color: #267F99">QuestionRenderInstructions</span><span style="color: #000000">) </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
+<span style="color: #000000">    </span><span style="color: #0000FF">const</span><span style="color: #000000"> { </span><span style="color: #0070C1">id</span><span style="color: #000000">, </span><span style="color: #0070C1">ui</span><span style="color: #000000">, </span><span style="color: #0070C1">currentAnswer</span><span style="color: #000000">, </span><span style="color: #0070C1">error</span><span style="color: #000000"> } = </span><span style="color: #001080">question</span><span style="color: #000000">;</span>
+<span style="color: #000000">    </span><span style="color: #AF00DB">return</span><span style="color: #000000"> (</span>
+<span style="color: #000000">      </span><span style="color: #800000">&lt;</span><span style="color: #267F99">TextInput</span>
+<span style="color: #000000">        </span><span style="color: #FF0000">error</span><span style="color: #000000">=</span><span style="color: #0000FF">{</span><span style="color: #001080">error</span><span style="color: #0000FF">}</span>
+<span style="color: #000000">        </span><span style="color: #FF0000">maxLength</span><span style="color: #000000">=</span><span style="color: #0000FF">{</span><span style="color: #001080">ui</span><span style="color: #000000FF">.</span><span style="color: #001080">maxLength</span><span style="color: #000000FF"> </span><span style="color: #AF00DB">as</span><span style="color: #000000FF"> </span><span style="color: #267F99">number</span><span style="color: #0000FF">}</span>
+<span style="color: #000000">        </span><span style="color: #FF0000">value</span><span style="color: #000000">=</span><span style="color: #0000FF">{</span><span style="color: #001080">currentAnswer</span><span style="color: #0000FF">}</span>
+<span style="color: #000000">        </span><span style="color: #FF0000">onChange</span><span style="color: #000000">=</span><span style="color: #0000FF">{</span><span style="color: #001080">e</span><span style="color: #000000FF"> </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000FF"> </span><span style="color: #001080">form</span><span style="color: #000000FF">.</span><span style="color: #795E26">setAnswer</span><span style="color: #000000FF">(</span><span style="color: #001080">id</span><span style="color: #000000FF">, </span><span style="color: #001080">e</span><span style="color: #000000FF">.</span><span style="color: #001080">target</span><span style="color: #000000FF">.</span><span style="color: #001080">value</span><span style="color: #000000FF">)</span><span style="color: #0000FF">}</span><span style="color: #000000"> </span><span style="color: #800000">/&gt;</span>
+<span style="color: #000000">    );</span>
+<span style="color: #000000">  };</span>
+
+<span style="color: #000000">  </span><span style="color: #AF00DB">return</span><span style="color: #000000"> </span><span style="color: #001080">renderInstructions</span><span style="color: #000000">[</span><span style="color: #098658">0</span><span style="color: #000000">].</span><span style="color: #001080">questions</span><span style="color: #000000">.</span><span style="color: #795E26">map</span><span style="color: #000000">(</span><span style="color: #001080">question</span><span style="color: #000000"> </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> </span><span style="color: #795E26">renderQuestion</span><span style="color: #000000">(</span><span style="color: #001080">question</span><span style="color: #000000">));</span>
+<span style="color: #000000">};</span>
+</code></pre>
+				<br />
+				<a href="#setting-answers" id="setting-answers" style="color: inherit; text-decoration: none;">
+					<h1><strong>Setting Answers</strong></h1>
+				</a>
+				<p><code>any</code> questions use <code>setAnswer</code> method to set answer.</p>
+				<p><code>single</code> questions use <code>setChoice</code> or <code>selectChoice</code> method to set answer.</p>
+				<p><code>multiple</code> questions use <code>setChoices</code> or <code>selectChoice</code> method to set answer.</p>
+				<a href="#example-general" id="example-general" style="color: inherit; text-decoration: none;">
+					<h3><strong>Example (General)</strong></h3>
+				</a>
+				<pre><code class="language-javascript"><span style="color: #001080">form</span><span style="color: #000000">.</span><span style="color: #795E26">setChoice</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;proceed&#039;</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;yes&#039;</span><span style="color: #000000">);</span>
+<span style="color: #001080">form</span><span style="color: #000000">.</span><span style="color: #795E26">setAnswer</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;name&#039;</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;Jason&#039;</span><span style="color: #000000">);</span>
+</code></pre>
+				<a href="#example-frontend" id="example-frontend" style="color: inherit; text-decoration: none;">
+					<h3><strong>Example (Frontend)</strong></h3>
+				</a>
+				<pre><code class="language-javascript"><span style="color: #001080">onChange</span><span style="color: #000000">={</span><span style="color: #001080">e</span><span style="color: #000000"> </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> </span><span style="color: #001080">form</span><span style="color: #000000">.</span><span style="color: #795E26">setChoice</span><span style="color: #000000">(</span><span style="color: #001080">id</span><span style="color: #000000">, </span><span style="color: #001080">e</span><span style="color: #000000">.</span><span style="color: #001080">target</span><span style="color: #000000">.</span><span style="color: #001080">value</span><span style="color: #000000">)}</span>
+<span style="color: #001080">onChange</span><span style="color: #000000">={</span><span style="color: #001080">e</span><span style="color: #000000"> </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> </span><span style="color: #001080">form</span><span style="color: #000000">.</span><span style="color: #795E26">setAnswer</span><span style="color: #000000">(</span><span style="color: #001080">id</span><span style="color: #000000">, </span><span style="color: #001080">e</span><span style="color: #000000">.</span><span style="color: #001080">target</span><span style="color: #000000">.</span><span style="color: #001080">value</span><span style="color: #000000">)}</span>
+</code></pre>
+				<br />
+				<a href="#validate-and-persist-the-answers" id="validate-and-persist-the-answers" style="color: inherit; text-decoration: none;">
+					<h1><strong>Validate and Persist the Answers</strong></h1>
+				</a>
+				<p>Use <code>validate</code> method to make sure that all the answers are validated.</p>
+				<p>Once the form is clean, use <code>getValidatedAnswers</code> method to get all answers from the form.</p>
+				<p>You can then store the answers to database or send it to backend via API.</p>
+				<a href="#example-frontend-1" id="example-frontend-1" style="color: inherit; text-decoration: none;">
+					<h3><strong>Example (Frontend)</strong></h3>
+				</a>
+				<pre><code class="language-javascript"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">valid</span><span style="color: #000000"> = </span><span style="color: #001080">form</span><span style="color: #000000">.</span><span style="color: #795E26">validate</span><span style="color: #000000">();</span>
+
+<span style="color: #AF00DB">if</span><span style="color: #000000"> (!</span><span style="color: #001080">valid</span><span style="color: #000000">) {</span>
+<span style="color: #000000">  </span><span style="color: #795E26">alert</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;There are some invalid answers.&#039;</span><span style="color: #000000">);</span>
+<span style="color: #000000">  </span><span style="color: #AF00DB">return</span><span style="color: #000000">;</span>
+<span style="color: #000000">}</span>
+
+<span style="color: #AF00DB">await</span><span style="color: #000000"> ... </span><span style="color: #008000">// Call API to send the answers to backend</span>
+</code></pre>
+				<p>If you are sending the answers from frontend to backend, backend can construct the form using the same configs, import the answers, and call <code>validate</code> method again to revalidate the answers from frontend before you save them into database.</p>
+				<a href="#example-backend-api" id="example-backend-api" style="color: inherit; text-decoration: none;">
+					<h3><strong>Example (Backend API)</strong></h3>
+				</a>
+				<pre><code class="language-javascript"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">answers</span><span style="color: #000000"> = </span><span style="color: #001080">req</span><span style="color: #000000">.</span><span style="color: #001080">body</span><span style="color: #000000">;</span>
+<span style="color: #001080">form</span><span style="color: #000000">.</span><span style="color: #795E26">importAnswers</span><span style="color: #000000">(</span><span style="color: #001080">answers</span><span style="color: #000000">);</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">valid</span><span style="color: #000000"> = </span><span style="color: #001080">form</span><span style="color: #000000">.</span><span style="color: #795E26">validate</span><span style="color: #000000">();</span>
+
+<span style="color: #AF00DB">if</span><span style="color: #000000"> (!</span><span style="color: #001080">valid</span><span style="color: #000000">) {</span>
+<span style="color: #000000">  </span><span style="color: #001080">res</span><span style="color: #000000">.</span><span style="color: #795E26">status</span><span style="color: #000000">(</span><span style="color: #098658">400</span><span style="color: #000000">);</span>
+<span style="color: #000000">  </span><span style="color: #001080">res</span><span style="color: #000000">.</span><span style="color: #795E26">json</span><span style="color: #000000">({ </span><span style="color: #001080">error:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;There are some invalid answers.&#039;</span><span style="color: #000000"> });</span>
+<span style="color: #000000">  </span><span style="color: #001080">res</span><span style="color: #000000">.</span><span style="color: #795E26">end</span><span style="color: #000000">();</span>
+<span style="color: #000000">  </span><span style="color: #AF00DB">return</span><span style="color: #000000">;</span>
+<span style="color: #000000">}</span>
+
+<span style="color: #AF00DB">await</span><span style="color: #000000"> ... </span><span style="color: #008000">// Save the answers to database</span>
+
+<span style="color: #001080">res</span><span style="color: #000000">.</span><span style="color: #795E26">status</span><span style="color: #000000">(</span><span style="color: #098658">200</span><span style="color: #000000">);</span>
+<span style="color: #001080">res</span><span style="color: #000000">.</span><span style="color: #795E26">end</span><span style="color: #000000">();</span>
+</code></pre>
+				<br />
+				<a href="#importing-answers" id="importing-answers" style="color: inherit; text-decoration: none;">
+					<h1><strong>Importing Answers</strong></h1>
+				</a>
+				<p>Use <code>importAnswers</code> method to import answers to the entire form.</p>
+				<a href="#example-frontend-2" id="example-frontend-2" style="color: inherit; text-decoration: none;">
+					<h3><strong>Example (Frontend)</strong></h3>
+				</a>
+				<pre><code class="language-javascript"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">answers</span><span style="color: #000000"> = </span><span style="color: #AF00DB">await</span><span style="color: #000000"> ... </span><span style="color: #008000">// retrieve from API</span>
+<span style="color: #001080">form</span><span style="color: #000000">.</span><span style="color: #795E26">importAnswers</span><span style="color: #000000">(</span><span style="color: #001080">answers</span><span style="color: #000000">);</span>
+</code></pre>
+				<a href="#example-backend" id="example-backend" style="color: inherit; text-decoration: none;">
+					<h3><strong>Example (Backend)</strong></h3>
+				</a>
+				<pre><code class="language-javascript"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">answers</span><span style="color: #000000"> = </span><span style="color: #AF00DB">await</span><span style="color: #000000"> ... </span><span style="color: #008000">// retrieve from database</span>
+<span style="color: #001080">form</span><span style="color: #000000">.</span><span style="color: #795E26">importAnswers</span><span style="color: #000000">(</span><span style="color: #001080">answers</span><span style="color: #000000">);</span>
+</code></pre>
+				<br />
+				<a href="#other-features" id="other-features" style="color: inherit; text-decoration: none;">
+					<h1><strong>Other Features</strong></h1>
+				</a>
+				<p>Use the following methods to clear current answers:</p>
+				<ul>
+					<li><code>clear</code></li>
+					<li><code>clearGroup</code></li>
+					<li><code>clearAnswer</code></li>
+				</ul>
+				<p>Use the following methods to reset answers to their default answers:</p>
+				<ul>
+					<li><code>reset</code></li>
+					<li><code>resetGroup</code></li>
+					<li><code>resetAnswer</code></li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class=" ">
+						<a href="modules.html">Exports</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-class">
+						<a href="classes/default.html" class="tsd-kind-icon">default</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/choiceconfigs.html" class="tsd-kind-icon">Choice<wbr>Configs</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/choicerenderinstructions.html" class="tsd-kind-icon">Choice<wbr>Render<wbr>Instructions</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/exportedchoiceconfigs.html" class="tsd-kind-icon">Exported<wbr>Choice<wbr>Configs</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/exportedgroupconfigs.html" class="tsd-kind-icon">Exported<wbr>Group<wbr>Configs</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/exportedquestionconfigs.html" class="tsd-kind-icon">Exported<wbr>Question<wbr>Configs</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/groupconfigs.html" class="tsd-kind-icon">Group<wbr>Configs</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/grouprenderinstructions.html" class="tsd-kind-icon">Group<wbr>Render<wbr>Instructions</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/questionconfigs.html" class="tsd-kind-icon">Question<wbr>Configs</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/questionrenderinstructions.html" class="tsd-kind-icon">Question<wbr>Render<wbr>Instructions</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="modules.html#answers" class="tsd-kind-icon">Answers</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="modules.html#choiceonselected" class="tsd-kind-icon">Choice<wbr>OnSelected</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="modules.html#choicevalue" class="tsd-kind-icon">Choice<wbr>Value</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="modules.html#configs" class="tsd-kind-icon">Configs</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="modules.html#customconfigs" class="tsd-kind-icon">Custom<wbr>Configs</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="modules.html#errors" class="tsd-kind-icon">Errors</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="modules.html#exportedconfigs" class="tsd-kind-icon">Exported<wbr>Configs</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="modules.html#formupdatelistener" class="tsd-kind-icon">Form<wbr>Update<wbr>Listener</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="modules.html#questiontype" class="tsd-kind-icon">Question<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="modules.html#renderinstructions" class="tsd-kind-icon">Render<wbr>Instructions</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="modules.html#validator" class="tsd-kind-icon">Validator</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="modules.html#validators" class="tsd-kind-icon">Validators</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer>
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

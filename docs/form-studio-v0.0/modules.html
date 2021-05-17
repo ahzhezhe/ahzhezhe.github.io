@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>form-studio - v0.1</title>
-	<meta name="description" content="Documentation for form-studio - v0.1">
+	<title>form-studio - v0.0</title>
+	<meta name="description" content="Documentation for form-studio - v0.0">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="assets/css/main.css">
 	<script async src="assets/js/search.js" id="search-script"></script>
@@ -23,7 +23,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="index.html" class="title">form-studio - v0.1</a>
+					<a href="index.html" class="title">form-studio - v0.0</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -50,7 +50,7 @@
 	</div>
 	<div class="tsd-page-title">
 		<div class="container">
-			<h1>form-studio - v0.1</h1>
+			<h1>form-studio - v0.0</h1>
 		</div>
 	</div>
 </header>
@@ -107,7 +107,7 @@
 								<li class="tsd-kind-type-alias"><a href="modules.html#choicevalue" class="tsd-kind-icon">Choice<wbr>Value</a></li>
 								<li class="tsd-kind-type-alias"><a href="modules.html#customconfigs" class="tsd-kind-icon">Custom<wbr>Configs</a></li>
 								<li class="tsd-kind-type-alias"><a href="modules.html#errors" class="tsd-kind-icon">Errors</a></li>
-								<li class="tsd-kind-type-alias"><a href="modules.html#formupdateevent" class="tsd-kind-icon">Form<wbr>Update<wbr>Event</a></li>
+								<li class="tsd-kind-type-alias"><a href="modules.html#formupdatelistener" class="tsd-kind-icon">Form<wbr>Update<wbr>Listener</a></li>
 								<li class="tsd-kind-type-alias"><a href="modules.html#questiontype" class="tsd-kind-icon">Question<wbr>Type</a></li>
 								<li class="tsd-kind-type-alias"><a href="modules.html#validator" class="tsd-kind-icon">Validator</a></li>
 								<li class="tsd-kind-type-alias"><a href="modules.html#validators" class="tsd-kind-icon">Validators</a></li>
@@ -126,7 +126,7 @@
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>Configs to initiate a form.</p>
+							<p>Configs to construct a form.</p>
 						</div>
 					</div>
 				</section>
@@ -142,7 +142,7 @@
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Exported form configs.
-							You can persist it and use it with <a href="classes/default.html#fromconfigs">fromConfigs</a> method to reinitiate the form later.</p>
+							You can persist it and use it to reconstruct the form later.</p>
 						</div>
 					</div>
 				</section>
@@ -233,9 +233,9 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-type-alias">
-					<a name="formupdateevent" class="tsd-anchor"></a>
-					<h3>Form<wbr>Update<wbr>Event</h3>
-					<div class="tsd-signature tsd-kind-icon">Form<wbr>Update<wbr>Event<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>form<span class="tsd-signature-symbol">: </span><a href="classes/default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="formupdatelistener" class="tsd-anchor"></a>
+					<h3>Form<wbr>Update<wbr>Listener</h3>
+					<div class="tsd-signature tsd-kind-icon">Form<wbr>Update<wbr>Listener<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>form<span class="tsd-signature-symbol">: </span><a href="classes/default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -385,7 +385,7 @@
 						<a href="modules.html#exportedconfigs" class="tsd-kind-icon">Exported<wbr>Configs</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
-						<a href="modules.html#formupdateevent" class="tsd-kind-icon">Form<wbr>Update<wbr>Event</a>
+						<a href="modules.html#formupdatelistener" class="tsd-kind-icon">Form<wbr>Update<wbr>Listener</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
 						<a href="modules.html#questiontype" class="tsd-kind-icon">Question<wbr>Type</a>
@@ -409,13 +409,11 @@
 		<h2>Legend</h2>
 		<div class="tsd-legend-group">
 			<ul class="tsd-legend">
-				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
-			</ul>
-			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
 				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
 			</ul>
 			<ul class="tsd-legend">
-				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
 			</ul>
 		</div>
 	</div>
