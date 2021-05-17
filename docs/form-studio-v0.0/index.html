@@ -82,7 +82,7 @@
 					<li>Any UI components, define your own UI configurations that suit your project needs and render the UI according to your own design system.</li>
 					<li>Validators, define your own validators that suit your project needs.</li>
 				</ul>
-				<p><a href="https://ahzhezhe.github.io/docs/form-studio-v0.1/index.html">API Documentation</a></p>
+				<p><a href="https://ahzhezhe.github.io/docs/form-studio-v0.0/index.html">API Documentation</a></p>
 				<br />
 				<a href="#install-via-npm" id="install-via-npm" style="color: inherit; text-decoration: none;">
 					<h2><strong>Install via NPM</strong></h2>
@@ -186,7 +186,7 @@
 					<h1><strong>Validators</strong></h1>
 				</a>
 				<p><code>form-studio</code> doesn&#39;t come with any predefined validator. You need to define your own validators according to your project needs.</p>
-				<p>A validator is a function that will be called when the answer of a question is updated, it throws <code>Error</code> when validation fails.</p>
+				<p>A validator is a function that will be called when the answer of a question is updated, it throws error when validation fails.</p>
 				<p>Each question can be assigned with a name of the validator to be used and a set of validation configs to be used by the validator.</p>
 				<a href="#example-1" id="example-1" style="color: inherit; text-decoration: none;">
 					<h3><strong>Example</strong></h3>
@@ -258,7 +258,7 @@
 					<li><code>currentAnswer</code>: current answer of the question, it is unvalidated and might not be valid, but you will still need to show them on UI</li>
 					<li><code>validatedAnswer</code>: validated answer</li>
 					<li><code>validating</code>: whether or not the question is currently being validating, it could happen if the validator used is an aysnc function, you might want to show a spinner or some other indicator on UI</li>
-					<li><code>error</code>: error message for question which failed validation</li>
+					<li><code>error</code>: error for question which failed validation</li>
 				</ul>
 				<a href="#example-react-1" id="example-react-1" style="color: inherit; text-decoration: none;">
 					<h3><strong>Example (React)</strong></h3>
@@ -295,18 +295,18 @@
 <span style="color: #000000">  </span><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #795E26">renderRadioGroup</span><span style="color: #000000"> = (</span><span style="color: #001080">question</span><span style="color: #000000">: </span><span style="color: #267F99">QuestionRenderInstructions</span><span style="color: #000000">) </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
 <span style="color: #000000">    </span><span style="color: #0000FF">const</span><span style="color: #000000"> { </span><span style="color: #0070C1">id</span><span style="color: #000000">, </span><span style="color: #0070C1">choices</span><span style="color: #000000">, </span><span style="color: #0070C1">error</span><span style="color: #000000">, </span><span style="color: #0070C1">currentAnswer</span><span style="color: #000000"> } = </span><span style="color: #001080">question</span><span style="color: #000000">;</span>
 <span style="color: #000000">    </span><span style="color: #AF00DB">return</span><span style="color: #000000"> (</span>
-<span style="color: #000000">      </span><span style="color: #800000">&lt;</span><span style="color: #267F99">Radio</span>
+<span style="color: #000000">      </span><span style="color: #800000">&lt;</span><span style="color: #267F99">RadioGroup</span>
 <span style="color: #000000">        </span><span style="color: #FF0000">error</span><span style="color: #000000">=</span><span style="color: #0000FF">{</span><span style="color: #001080">error</span><span style="color: #0000FF">}</span>
 <span style="color: #000000">        </span><span style="color: #FF0000">value</span><span style="color: #000000">=</span><span style="color: #0000FF">{</span><span style="color: #001080">currentAnswer</span><span style="color: #0000FF">}</span>
 <span style="color: #000000">        </span><span style="color: #FF0000">onChange</span><span style="color: #000000">=</span><span style="color: #0000FF">{</span><span style="color: #001080">e</span><span style="color: #000000FF"> </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000FF"> </span><span style="color: #001080">form</span><span style="color: #000000FF">.</span><span style="color: #795E26">setChoice</span><span style="color: #000000FF">(</span><span style="color: #001080">id</span><span style="color: #000000FF">, </span><span style="color: #001080">e</span><span style="color: #000000FF">.</span><span style="color: #001080">target</span><span style="color: #000000FF">.</span><span style="color: #001080">value</span><span style="color: #000000FF">)</span><span style="color: #0000FF">}</span><span style="color: #800000">&gt;</span>
 <span style="color: #000000">        </span><span style="color: #0000FF">{</span><span style="color: #001080">choices</span><span style="color: #000000">!</span><span style="color: #000000FF">.</span><span style="color: #795E26">map</span><span style="color: #000000FF">(</span><span style="color: #001080">choice</span><span style="color: #000000FF"> </span><span style="color: #0000FF">=&gt;</span>
-<span style="color: #000000FF">          </span><span style="color: #800000">&lt;</span><span style="color: #267F99">RadioOption</span>
+<span style="color: #000000FF">          </span><span style="color: #800000">&lt;</span><span style="color: #267F99">Radio</span>
 <span style="color: #000000FF">            </span><span style="color: #FF0000">value</span><span style="color: #000000">=</span><span style="color: #0000FF">{</span><span style="color: #001080">choice</span><span style="color: #000000FF">.</span><span style="color: #001080">value</span><span style="color: #0000FF">}</span>
 <span style="color: #000000FF">            </span><span style="color: #FF0000">disabled</span><span style="color: #000000">=</span><span style="color: #0000FF">{</span><span style="color: #001080">choice</span><span style="color: #000000FF">.</span><span style="color: #001080">disabled</span><span style="color: #0000FF">}</span><span style="color: #800000">&gt;</span>
 <span style="color: #000000FF">            </span><span style="color: #0000FF">{</span><span style="color: #001080">choice</span><span style="color: #000000FF">.</span><span style="color: #001080">ui</span><span style="color: #000000FF">.</span><span style="color: #001080">title</span><span style="color: #0000FF">}</span>
-<span style="color: #000000FF">          </span><span style="color: #800000">&lt;/</span><span style="color: #267F99">RadioOption</span><span style="color: #800000">&gt;</span>
+<span style="color: #000000FF">          </span><span style="color: #800000">&lt;/</span><span style="color: #267F99">Radio</span><span style="color: #800000">&gt;</span>
 <span style="color: #000000FF">        )</span><span style="color: #0000FF">}</span>
-<span style="color: #000000">      </span><span style="color: #800000">&lt;/</span><span style="color: #267F99">Radio</span><span style="color: #800000">&gt;</span>
+<span style="color: #000000">      </span><span style="color: #800000">&lt;/</span><span style="color: #267F99">RadioGroup</span><span style="color: #800000">&gt;</span>
 <span style="color: #000000">    );</span>
 <span style="color: #000000">  };</span>
 
