@@ -8,8 +8,6 @@
 
 [onemapsg](https://www.npmjs.com/package/onemapsg)
 
-<br />
-
 # **API Documentations**
 
 ## **terraform-generator**
