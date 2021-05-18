@@ -105,6 +105,7 @@
 								<li class="tsd-kind-type-alias"><a href="modules.html#answers" class="tsd-kind-icon">Answers</a></li>
 								<li class="tsd-kind-type-alias"><a href="modules.html#choiceonselected" class="tsd-kind-icon">Choice<wbr>OnSelected</a></li>
 								<li class="tsd-kind-type-alias"><a href="modules.html#choicevalue" class="tsd-kind-icon">Choice<wbr>Value</a></li>
+								<li class="tsd-kind-type-alias"><a href="modules.html#configsvalidationresult" class="tsd-kind-icon">Configs<wbr>Validation<wbr>Result</a></li>
 								<li class="tsd-kind-type-alias"><a href="modules.html#customconfigs" class="tsd-kind-icon">Custom<wbr>Configs</a></li>
 								<li class="tsd-kind-type-alias"><a href="modules.html#errors" class="tsd-kind-icon">Errors</a></li>
 								<li class="tsd-kind-type-alias"><a href="modules.html#formupdatelistener" class="tsd-kind-icon">Form<wbr>Update<wbr>Listener</a></li>
@@ -212,6 +213,36 @@
 					<div class="tsd-signature tsd-kind-icon">Choice<wbr>Value<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias">
+					<a name="configsvalidationresult" class="tsd-anchor"></a>
+					<h3>Configs<wbr>Validation<wbr>Result</h3>
+					<div class="tsd-signature tsd-kind-icon">Configs<wbr>Validation<wbr>Result<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>errors<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">; </span>pass<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> }</span></div>
+					<aside class="tsd-sources">
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> errors<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>Errors of invalid configs.</p>
+									</div>
+									<p>Keys are group / question / choice ids, values are error messages.
+									If key is an empty string, that means the error is related to the form itself.</p>
+								</div>
+							</li>
+							<li class="tsd-parameter">
+								<h5>pass<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>Whether or not the configs is valid.</p>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-type-alias">
 					<a name="customconfigs" class="tsd-anchor"></a>
@@ -384,6 +415,9 @@
 						<a href="modules.html#configs" class="tsd-kind-icon">Configs</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
+						<a href="modules.html#configsvalidationresult" class="tsd-kind-icon">Configs<wbr>Validation<wbr>Result</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
 						<a href="modules.html#customconfigs" class="tsd-kind-icon">Custom<wbr>Configs</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
@@ -422,6 +456,9 @@
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
 			</ul>
 		</div>
 	</div>
