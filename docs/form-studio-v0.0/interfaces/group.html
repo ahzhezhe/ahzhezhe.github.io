@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>ExportedGroupConfigs | form-studio - v0.0</title>
+	<title>Group | form-studio - v0.0</title>
 	<meta name="description" content="Documentation for form-studio - v0.0">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -55,10 +55,10 @@
 					<a href="../modules.html">form-studio - v0.0</a>
 				</li>
 				<li>
-					<a href="exportedgroupconfigs.html">ExportedGroupConfigs</a>
+					<a href="group.html">Group</a>
 				</li>
 			</ul>
-			<h1>Interface ExportedGroupConfigs</h1>
+			<h1>Interface Group</h1>
 		</div>
 	</div>
 </header>
@@ -69,10 +69,10 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="tsd-signature-type">ExportedItemConfigs</span>
+						<span class="tsd-signature-type">Item</span>
 						<ul class="tsd-hierarchy">
 							<li>
-								<span class="target">ExportedGroupConfigs</span>
+								<span class="target">Group</span>
 							</li>
 						</ul>
 					</li>
@@ -85,11 +85,11 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="exportedgroupconfigs.html#defaultdisabled" class="tsd-kind-icon">default<wbr>Disabled</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="exportedgroupconfigs.html#groups" class="tsd-kind-icon">groups</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="exportedgroupconfigs.html#id" class="tsd-kind-icon">id</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="exportedgroupconfigs.html#questions" class="tsd-kind-icon">questions</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="exportedgroupconfigs.html#ui" class="tsd-kind-icon">ui</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="group.html#custom" class="tsd-kind-icon">custom</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="group.html#defaultdisabled" class="tsd-kind-icon">default<wbr>Disabled</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="group.html#groups" class="tsd-kind-icon">groups</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="group.html#id" class="tsd-kind-icon">id</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="group.html#questions" class="tsd-kind-icon">questions</a></li>
 							</ul>
 						</section>
 					</div>
@@ -98,17 +98,25 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="custom" class="tsd-anchor"></a>
+					<h3>custom</h3>
+					<div class="tsd-signature tsd-kind-icon">custom<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from Item.custom</p>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="defaultdisabled" class="tsd-anchor"></a>
 					<h3>default<wbr>Disabled</h3>
 					<div class="tsd-signature tsd-kind-icon">default<wbr>Disabled<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from ExportedItemConfigs.defaultDisabled</p>
+						<p>Inherited from Item.defaultDisabled</p>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="groups" class="tsd-anchor"></a>
 					<h3>groups</h3>
-					<div class="tsd-signature tsd-kind-icon">groups<span class="tsd-signature-symbol">:</span> <a href="exportedgroupconfigs.html" class="tsd-signature-type" data-tsd-kind="Interface">ExportedGroupConfigs</a><span class="tsd-signature-symbol">[]</span></div>
+					<div class="tsd-signature tsd-kind-icon">groups<span class="tsd-signature-symbol">:</span> <a href="group.html" class="tsd-signature-type" data-tsd-kind="Interface">Group</a><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 					</aside>
 				</section>
@@ -117,22 +125,14 @@
 					<h3>id</h3>
 					<div class="tsd-signature tsd-kind-icon">id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from ExportedItemConfigs.id</p>
+						<p>Inherited from Item.id</p>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="questions" class="tsd-anchor"></a>
 					<h3>questions</h3>
-					<div class="tsd-signature tsd-kind-icon">questions<span class="tsd-signature-symbol">:</span> <a href="exportedquestionconfigs.html" class="tsd-signature-type" data-tsd-kind="Interface">ExportedQuestionConfigs</a><span class="tsd-signature-symbol">[]</span></div>
+					<div class="tsd-signature tsd-kind-icon">questions<span class="tsd-signature-symbol">:</span> <a href="question.html" class="tsd-signature-type" data-tsd-kind="Interface">Question</a><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-					<a name="ui" class="tsd-anchor"></a>
-					<h3>ui</h3>
-					<div class="tsd-signature tsd-kind-icon">ui<span class="tsd-signature-symbol">:</span> <a href="../modules.html#customconfigs" class="tsd-signature-type" data-tsd-kind="Type alias">CustomConfigs</a></div>
-					<aside class="tsd-sources">
-						<p>Inherited from ExportedItemConfigs.ui</p>
 					</aside>
 				</section>
 			</section>
@@ -151,46 +151,46 @@
 						<a href="../classes/default.html" class="tsd-kind-icon">default</a>
 					</li>
 					<li class=" tsd-kind-interface">
+						<a href="choice.html" class="tsd-kind-icon">Choice</a>
+					</li>
+					<li class=" tsd-kind-interface">
 						<a href="choiceconfigs.html" class="tsd-kind-icon">Choice<wbr>Configs</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="choicerenderinstructions.html" class="tsd-kind-icon">Choice<wbr>Render<wbr>Instructions</a>
 					</li>
-					<li class=" tsd-kind-interface">
-						<a href="exportedchoiceconfigs.html" class="tsd-kind-icon">Exported<wbr>Choice<wbr>Configs</a>
-					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface">
-						<a href="exportedgroupconfigs.html" class="tsd-kind-icon">Exported<wbr>Group<wbr>Configs</a>
+						<a href="group.html" class="tsd-kind-icon">Group</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-								<a href="exportedgroupconfigs.html#defaultdisabled" class="tsd-kind-icon">default<wbr>Disabled</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="exportedgroupconfigs.html#groups" class="tsd-kind-icon">groups</a>
+								<a href="group.html#custom" class="tsd-kind-icon">custom</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-								<a href="exportedgroupconfigs.html#id" class="tsd-kind-icon">id</a>
+								<a href="group.html#defaultdisabled" class="tsd-kind-icon">default<wbr>Disabled</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="exportedgroupconfigs.html#questions" class="tsd-kind-icon">questions</a>
+								<a href="group.html#groups" class="tsd-kind-icon">groups</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-								<a href="exportedgroupconfigs.html#ui" class="tsd-kind-icon">ui</a>
+								<a href="group.html#id" class="tsd-kind-icon">id</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="group.html#questions" class="tsd-kind-icon">questions</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
 					<li class=" tsd-kind-interface">
-						<a href="exportedquestionconfigs.html" class="tsd-kind-icon">Exported<wbr>Question<wbr>Configs</a>
-					</li>
-					<li class=" tsd-kind-interface">
 						<a href="groupconfigs.html" class="tsd-kind-icon">Group<wbr>Configs</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="grouprenderinstructions.html" class="tsd-kind-icon">Group<wbr>Render<wbr>Instructions</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="question.html" class="tsd-kind-icon">Question</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="questionconfigs.html" class="tsd-kind-icon">Question<wbr>Configs</a>
@@ -209,9 +209,6 @@
 					</li>
 					<li class=" tsd-kind-type-alias">
 						<a href="../modules.html#configsvalidationresult" class="tsd-kind-icon">Configs<wbr>Validation<wbr>Result</a>
-					</li>
-					<li class=" tsd-kind-type-alias">
-						<a href="../modules.html#customconfigs" class="tsd-kind-icon">Custom<wbr>Configs</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
 						<a href="../modules.html#errors" class="tsd-kind-icon">Errors</a>

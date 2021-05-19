@@ -87,11 +87,11 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="questionrenderinstructions.html#choices" class="tsd-kind-icon">choices</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="questionrenderinstructions.html#currentanswer" class="tsd-kind-icon">current<wbr>Answer</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="questionrenderinstructions.html#custom" class="tsd-kind-icon">custom</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="questionrenderinstructions.html#disabled" class="tsd-kind-icon">disabled</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="questionrenderinstructions.html#error" class="tsd-kind-icon">error</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="questionrenderinstructions.html#id" class="tsd-kind-icon">id</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="questionrenderinstructions.html#type" class="tsd-kind-icon">type</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="questionrenderinstructions.html#ui" class="tsd-kind-icon">ui</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="questionrenderinstructions.html#validatedanswer" class="tsd-kind-icon">validated<wbr>Answer</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="questionrenderinstructions.html#validating" class="tsd-kind-icon">validating</a></li>
 							</ul>
@@ -126,6 +126,19 @@
 						<p>For questions with <code>any</code> as <a href="questionrenderinstructions.html#type">type</a>, it should be the input value.</p>
 						<p>For questions with <code>single</code> as <a href="questionrenderinstructions.html#type">type</a>, it should be the value of the selected choice.</p>
 						<p>For questions with <code>multiple</code> as <a href="questionrenderinstructions.html#type">type</a>, it should be a list of values of the selected choices.</p>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="custom" class="tsd-anchor"></a>
+					<h3>custom</h3>
+					<div class="tsd-signature tsd-kind-icon">custom<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from ItemRenderInstructions.custom</p>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Any values that help you determine how to render the frontend UI.</p>
+						</div>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
@@ -186,19 +199,6 @@
 						Usually check box group will be used for this question.</p>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-					<a name="ui" class="tsd-anchor"></a>
-					<h3>ui</h3>
-					<div class="tsd-signature tsd-kind-icon">ui<span class="tsd-signature-symbol">:</span> <a href="../modules.html#customconfigs" class="tsd-signature-type" data-tsd-kind="Type alias">CustomConfigs</a></div>
-					<aside class="tsd-sources">
-						<p>Inherited from ItemRenderInstructions.ui</p>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>Any values that help you determine how to render the frontend UI of this item.</p>
-						</div>
-					</div>
-				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="validatedanswer" class="tsd-anchor"></a>
 					<h3>validated<wbr>Answer</h3>
@@ -244,25 +244,25 @@
 						<a href="../classes/default.html" class="tsd-kind-icon">default</a>
 					</li>
 					<li class=" tsd-kind-interface">
+						<a href="choice.html" class="tsd-kind-icon">Choice</a>
+					</li>
+					<li class=" tsd-kind-interface">
 						<a href="choiceconfigs.html" class="tsd-kind-icon">Choice<wbr>Configs</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="choicerenderinstructions.html" class="tsd-kind-icon">Choice<wbr>Render<wbr>Instructions</a>
 					</li>
 					<li class=" tsd-kind-interface">
-						<a href="exportedchoiceconfigs.html" class="tsd-kind-icon">Exported<wbr>Choice<wbr>Configs</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="exportedgroupconfigs.html" class="tsd-kind-icon">Exported<wbr>Group<wbr>Configs</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="exportedquestionconfigs.html" class="tsd-kind-icon">Exported<wbr>Question<wbr>Configs</a>
+						<a href="group.html" class="tsd-kind-icon">Group</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="groupconfigs.html" class="tsd-kind-icon">Group<wbr>Configs</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="grouprenderinstructions.html" class="tsd-kind-icon">Group<wbr>Render<wbr>Instructions</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="question.html" class="tsd-kind-icon">Question</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="questionconfigs.html" class="tsd-kind-icon">Question<wbr>Configs</a>
@@ -279,6 +279,9 @@
 								<a href="questionrenderinstructions.html#currentanswer" class="tsd-kind-icon">current<wbr>Answer</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="questionrenderinstructions.html#custom" class="tsd-kind-icon">custom</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 								<a href="questionrenderinstructions.html#disabled" class="tsd-kind-icon">disabled</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
@@ -289,9 +292,6 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="questionrenderinstructions.html#type" class="tsd-kind-icon">type</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-								<a href="questionrenderinstructions.html#ui" class="tsd-kind-icon">ui</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="questionrenderinstructions.html#validatedanswer" class="tsd-kind-icon">validated<wbr>Answer</a>
@@ -314,9 +314,6 @@
 					</li>
 					<li class=" tsd-kind-type-alias">
 						<a href="../modules.html#configsvalidationresult" class="tsd-kind-icon">Configs<wbr>Validation<wbr>Result</a>
-					</li>
-					<li class=" tsd-kind-type-alias">
-						<a href="../modules.html#customconfigs" class="tsd-kind-icon">Custom<wbr>Configs</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
 						<a href="../modules.html#errors" class="tsd-kind-icon">Errors</a>
