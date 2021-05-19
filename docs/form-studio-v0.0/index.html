@@ -115,7 +115,7 @@
 					<li><code>id</code>: An unique id to identify the item</li>
 					<li><code>order</code>: Sort order of the item among it&#39;s parent</li>
 					<li><code>defaultDisabled</code>: To indicate that the item is disabled by default</li>
-					<li><code>ui</code>: Any values that help you determine on how to render the frontend UI for this item, it should contain minimal but useful information, e.g. title, placeholder</li>
+					<li><code>custom</code>: Any values that help you determine on how to render the frontend UI or how to perform validation, it should contain minimal but useful information, e.g. title, placeholder</li>
 				</ul>
 				<a href="#group" id="group" style="color: inherit; text-decoration: none;">
 					<h3><strong>Group</strong></h3>
@@ -126,17 +126,17 @@
 				<a href="#question" id="question" style="color: inherit; text-decoration: none;">
 					<h3><strong>Question</strong></h3>
 				</a>
-				<p>There are 3 types of questions: <code>any</code>, <code>single</code> and <code>multiple</code>.</p>
+				<p>There are 3 types of questions: <code>any</code>, <code>choice</code> and <code>choices</code>.</p>
 				<p>A question comes with an answer (could be undefined if it is unanswered) and an error (could be undefined if it is unanswered, unvalidated or passed validation).</p>
 				<p><code>any</code> questions accept <code>any</code> value as an answer.</p>
-				<p><code>single</code> questions accept a choice value as an answer.</p>
-				<p><code>multiple</code> questions accept a list of choice values as an answer.</p>
-				<p><code>single</code> and <code>multiple</code> questions need to have 1 or more choices.</p>
+				<p><code>choice</code> questions accept a choice value as an answer.</p>
+				<p><code>choices</code> questions accept a list of choice values as an answer.</p>
+				<p><code>choice</code> and <code>choices</code> questions need to have 1 or more choices.</p>
 				<p>You can also define the validators to be used by a question to validate its answer.</p>
 				<a href="#choice" id="choice" style="color: inherit; text-decoration: none;">
 					<h3><strong>Choice</strong></h3>
 				</a>
-				<p>Choices are for <code>single</code> or <code>multiple</code> questions.</p>
+				<p>Choices are for <code>choice</code> or <code>choices</code> questions.</p>
 				<p>A choice comes with a value. Value of the choices will be the answer of the question.</p>
 				<p>A choice has the ability to disable/enable other groups/questions/choices when it&#39;s selected/unselected.</p>
 				<a href="#example" id="example" style="color: inherit; text-decoration: none;">
@@ -149,14 +149,14 @@
 <span style="color: #000000">    </span><span style="color: #0451A5">&quot;questions&quot;</span><span style="color: #000000">: [</span>
 <span style="color: #000000">      {</span>
 <span style="color: #000000">        </span><span style="color: #0451A5">&quot;id&quot;</span><span style="color: #000000">: </span><span style="color: #A31515">&quot;proceed&quot;</span><span style="color: #000000">,</span>
-<span style="color: #000000">        </span><span style="color: #0451A5">&quot;type&quot;</span><span style="color: #000000">: </span><span style="color: #A31515">&quot;single&quot;</span><span style="color: #000000">,</span>
-<span style="color: #000000">        </span><span style="color: #0451A5">&quot;ui&quot;</span><span style="color: #000000">: {</span>
+<span style="color: #000000">        </span><span style="color: #0451A5">&quot;type&quot;</span><span style="color: #000000">: </span><span style="color: #A31515">&quot;choice&quot;</span><span style="color: #000000">,</span>
+<span style="color: #000000">        </span><span style="color: #0451A5">&quot;custom&quot;</span><span style="color: #000000">: {</span>
 <span style="color: #000000">          </span><span style="color: #0451A5">&quot;title&quot;</span><span style="color: #000000">: </span><span style="color: #A31515">&quot;Would you like to proceed?&quot;</span>
 <span style="color: #000000">        },</span>
 <span style="color: #000000">        </span><span style="color: #0451A5">&quot;choices&quot;</span><span style="color: #000000">: [</span>
 <span style="color: #000000">          {</span>
 <span style="color: #000000">            </span><span style="color: #0451A5">&quot;value&quot;</span><span style="color: #000000">: </span><span style="color: #A31515">&quot;yes&quot;</span><span style="color: #000000">,</span>
-<span style="color: #000000">            </span><span style="color: #0451A5">&quot;ui&quot;</span><span style="color: #000000">: {</span>
+<span style="color: #000000">            </span><span style="color: #0451A5">&quot;custom&quot;</span><span style="color: #000000">: {</span>
 <span style="color: #000000">              </span><span style="color: #0451A5">&quot;title&quot;</span><span style="color: #000000">: </span><span style="color: #A31515">&quot;Yes&quot;</span>
 <span style="color: #000000">            },</span>
 <span style="color: #000000">            </span><span style="color: #0451A5">&quot;onSelected&quot;</span><span style="color: #000000">: {</span>
@@ -167,7 +167,7 @@
 <span style="color: #000000">          },</span>
 <span style="color: #000000">          {</span>
 <span style="color: #000000">            </span><span style="color: #0451A5">&quot;value&quot;</span><span style="color: #000000">: </span><span style="color: #A31515">&quot;no&quot;</span><span style="color: #000000">,</span>
-<span style="color: #000000">            </span><span style="color: #0451A5">&quot;ui&quot;</span><span style="color: #000000">: {</span>
+<span style="color: #000000">            </span><span style="color: #0451A5">&quot;custom&quot;</span><span style="color: #000000">: {</span>
 <span style="color: #000000">              </span><span style="color: #0451A5">&quot;title&quot;</span><span style="color: #000000">: </span><span style="color: #A31515">&quot;No&quot;</span>
 <span style="color: #000000">            }</span>
 <span style="color: #000000">          }</span>
@@ -177,7 +177,7 @@
 <span style="color: #000000">        </span><span style="color: #0451A5">&quot;id&quot;</span><span style="color: #000000">: </span><span style="color: #A31515">&quot;name&quot;</span><span style="color: #000000">,</span>
 <span style="color: #000000">        </span><span style="color: #0451A5">&quot;defaultDisabled&quot;</span><span style="color: #000000">: </span><span style="color: #0000FF">true</span><span style="color: #000000">,</span>
 <span style="color: #000000">        </span><span style="color: #0451A5">&quot;type&quot;</span><span style="color: #000000">: </span><span style="color: #A31515">&quot;any&quot;</span><span style="color: #000000">,</span>
-<span style="color: #000000">        </span><span style="color: #0451A5">&quot;ui&quot;</span><span style="color: #000000">: {</span>
+<span style="color: #000000">        </span><span style="color: #0451A5">&quot;custom&quot;</span><span style="color: #000000">: {</span>
 <span style="color: #000000">          </span><span style="color: #0451A5">&quot;type&quot;</span><span style="color: #000000">: </span><span style="color: #A31515">&quot;string&quot;</span><span style="color: #000000">,</span>
 <span style="color: #000000">          </span><span style="color: #0451A5">&quot;title&quot;</span><span style="color: #000000">: </span><span style="color: #A31515">&quot;What is you name?&quot;</span><span style="color: #000000">,</span>
 <span style="color: #000000">        },</span>
@@ -215,8 +215,8 @@
 <span style="color: #000000">    }</span>
 <span style="color: #000000">  },</span>
 
-<span style="color: #000000">  </span><span style="color: #795E26">number</span><span style="color: #001080">:</span><span style="color: #000000"> (</span><span style="color: #001080">answer</span><span style="color: #000000">, </span><span style="color: #001080">validation</span><span style="color: #000000">) </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
-<span style="color: #000000">    </span><span style="color: #0000FF">const</span><span style="color: #000000"> { </span><span style="color: #0070C1">min</span><span style="color: #000000">, </span><span style="color: #0070C1">max</span><span style="color: #000000"> } = </span><span style="color: #001080">validation</span><span style="color: #000000">;</span>
+<span style="color: #000000">  </span><span style="color: #795E26">number</span><span style="color: #001080">:</span><span style="color: #000000"> (</span><span style="color: #001080">answer</span><span style="color: #000000">, </span><span style="color: #001080">question</span><span style="color: #000000">) </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
+<span style="color: #000000">    </span><span style="color: #0000FF">const</span><span style="color: #000000"> { </span><span style="color: #0070C1">min</span><span style="color: #000000">, </span><span style="color: #0070C1">max</span><span style="color: #000000"> } = </span><span style="color: #001080">question</span><span style="color: #000000">.</span><span style="color: #001080">custom</span><span style="color: #000000">;</span>
 <span style="color: #000000">    </span><span style="color: #AF00DB">if</span><span style="color: #000000"> (</span><span style="color: #001080">answer</span><span style="color: #000000"> &lt; </span><span style="color: #001080">min</span><span style="color: #000000">){</span>
 <span style="color: #000000">      </span><span style="color: #AF00DB">throw</span><span style="color: #000000"> </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #267F99">Error</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;Please enter no less than &#039;</span><span style="color: #000000"> + </span><span style="color: #001080">min</span><span style="color: #000000"> + </span><span style="color: #A31515">&#039;.&#039;</span><span style="color: #000000">);</span>
 <span style="color: #000000">    }</span>
@@ -256,14 +256,14 @@
 				<ul>
 					<li><code>id</code>: An unique id to identify the item</li>
 					<li><code>disabled</code>: Whether or not this item is disabled, you should handle it in the UI, e.g. hide or grey out disabled item</li>
-					<li><code>ui</code>: The exact same values that you specified in the form configs</li>
+					<li><code>custom</code>: The exact same values that you specified in the form configs</li>
 				</ul>
 				<p>Questions also come with the following important properties that you will need to determine the UI:</p>
 				<ul>
 					<li><code>type</code>:<ul>
-							<li><code>any</code>: render whatever UI that is required based on your custom <code>ui</code> config, e.g. if <code>ui.inputType</code> is <code>string</code>, then a simple text input is rendered</li>
-							<li><code>single</code>: render UI that allows user to select 1 option from a list of options, e.g. select, radio button group</li>
-							<li><code>multiple</code>: render UI that allows user to select multiple options from a list of options, e.g. check box group</li>
+							<li><code>any</code>: render whatever UI that is required based on your <code>custom</code> configs, e.g. if <code>custom.inputType</code> is <code>string</code>, then a simple text input is rendered</li>
+							<li><code>choice</code>: render UI that allows user to select 1 option from a list of options, e.g. select, radio button group</li>
+							<li><code>choices</code>: render UI that allows user to select multiple options from a list of options, e.g. check box group</li>
 						</ul>
 					</li>
 					<li><code>currentAnswer</code>: current answer of the question, it is unvalidated and might not be valid, but you will still need to show them on UI</li>
@@ -284,21 +284,21 @@
 <span style="color: #000000">  }, []);</span>
 
 <span style="color: #000000">  </span><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #795E26">renderQuestion</span><span style="color: #000000"> = (</span><span style="color: #001080">question</span><span style="color: #000000">: </span><span style="color: #267F99">QuestionRenderInstructions</span><span style="color: #000000">) </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
-<span style="color: #000000">    </span><span style="color: #0000FF">const</span><span style="color: #000000"> { </span><span style="color: #0070C1">disabled</span><span style="color: #000000">, </span><span style="color: #0070C1">type</span><span style="color: #000000">, </span><span style="color: #0070C1">ui</span><span style="color: #000000"> } = </span><span style="color: #001080">question</span><span style="color: #000000">;</span>
+<span style="color: #000000">    </span><span style="color: #0000FF">const</span><span style="color: #000000"> { </span><span style="color: #0070C1">disabled</span><span style="color: #000000">, </span><span style="color: #0070C1">type</span><span style="color: #000000">, </span><span style="color: #0070C1">custom</span><span style="color: #000000"> } = </span><span style="color: #001080">question</span><span style="color: #000000">;</span>
 <span style="color: #000000">    </span><span style="color: #AF00DB">if</span><span style="color: #000000"> (</span><span style="color: #001080">disabled</span><span style="color: #000000">) {</span>
 <span style="color: #000000">      </span><span style="color: #AF00DB">return</span><span style="color: #000000"> </span><span style="color: #0000FF">null</span><span style="color: #000000">;</span>
 <span style="color: #000000">    }</span>
 <span style="color: #000000">    </span><span style="color: #AF00DB">if</span><span style="color: #000000"> (</span><span style="color: #001080">type</span><span style="color: #000000"> === </span><span style="color: #A31515">&#039;any&#039;</span><span style="color: #000000">) {</span>
 <span style="color: #000000">      </span><span style="color: #AF00DB">return</span><span style="color: #000000"> (</span>
 <span style="color: #000000">        </span><span style="color: #800000">&lt;&gt;</span>
-<span style="color: #000000">          </span><span style="color: #0000FF">{</span><span style="color: #001080">ui</span><span style="color: #000000FF">.</span><span style="color: #001080">inputType</span><span style="color: #000000FF"> </span><span style="color: #000000">===</span><span style="color: #000000FF"> </span><span style="color: #A31515">&#039;string&#039;</span><span style="color: #000000FF"> </span><span style="color: #000000">&amp;&amp;</span><span style="color: #000000FF"> </span><span style="color: #795E26">renderStringInput</span><span style="color: #000000FF">(</span><span style="color: #001080">question</span><span style="color: #000000FF">)</span><span style="color: #0000FF">}</span>
+<span style="color: #000000">          </span><span style="color: #0000FF">{</span><span style="color: #001080">custom</span><span style="color: #000000FF">.</span><span style="color: #001080">inputType</span><span style="color: #000000FF"> </span><span style="color: #000000">===</span><span style="color: #000000FF"> </span><span style="color: #A31515">&#039;string&#039;</span><span style="color: #000000FF"> </span><span style="color: #000000">&amp;&amp;</span><span style="color: #000000FF"> </span><span style="color: #795E26">renderStringInput</span><span style="color: #000000FF">(</span><span style="color: #001080">question</span><span style="color: #000000FF">)</span><span style="color: #0000FF">}</span>
 <span style="color: #000000">        </span><span style="color: #800000">&lt;/&gt;</span>
 <span style="color: #000000">      );</span>
 <span style="color: #000000">    }</span>
-<span style="color: #000000">    </span><span style="color: #AF00DB">if</span><span style="color: #000000"> (</span><span style="color: #001080">type</span><span style="color: #000000"> === </span><span style="color: #A31515">&#039;single&#039;</span><span style="color: #000000">) {</span>
+<span style="color: #000000">    </span><span style="color: #AF00DB">if</span><span style="color: #000000"> (</span><span style="color: #001080">type</span><span style="color: #000000"> === </span><span style="color: #A31515">&#039;choice&#039;</span><span style="color: #000000">) {</span>
 <span style="color: #000000">      </span><span style="color: #AF00DB">return</span><span style="color: #000000"> </span><span style="color: #795E26">renderRadioGroup</span><span style="color: #000000">(</span><span style="color: #001080">question</span><span style="color: #000000">);</span>
 <span style="color: #000000">    }</span>
-<span style="color: #000000">    </span><span style="color: #AF00DB">if</span><span style="color: #000000"> (</span><span style="color: #001080">type</span><span style="color: #000000"> === </span><span style="color: #A31515">&#039;multiple&#039;</span><span style="color: #000000">) {</span>
+<span style="color: #000000">    </span><span style="color: #AF00DB">if</span><span style="color: #000000"> (</span><span style="color: #001080">type</span><span style="color: #000000"> === </span><span style="color: #A31515">&#039;choices&#039;</span><span style="color: #000000">) {</span>
 <span style="color: #000000">      </span><span style="color: #AF00DB">return</span><span style="color: #000000"> </span><span style="color: #795E26">renderCheckBoxGroup</span><span style="color: #000000">(</span><span style="color: #001080">question</span><span style="color: #000000">);</span>
 <span style="color: #000000">    }</span>
 <span style="color: #000000">  };</span>
@@ -314,7 +314,7 @@
 <span style="color: #000000FF">          </span><span style="color: #800000">&lt;</span><span style="color: #267F99">Radio</span>
 <span style="color: #000000FF">            </span><span style="color: #FF0000">value</span><span style="color: #000000">=</span><span style="color: #0000FF">{</span><span style="color: #001080">choice</span><span style="color: #000000FF">.</span><span style="color: #001080">value</span><span style="color: #0000FF">}</span>
 <span style="color: #000000FF">            </span><span style="color: #FF0000">disabled</span><span style="color: #000000">=</span><span style="color: #0000FF">{</span><span style="color: #001080">choice</span><span style="color: #000000FF">.</span><span style="color: #001080">disabled</span><span style="color: #0000FF">}</span><span style="color: #800000">&gt;</span>
-<span style="color: #000000FF">            </span><span style="color: #0000FF">{</span><span style="color: #001080">choice</span><span style="color: #000000FF">.</span><span style="color: #001080">ui</span><span style="color: #000000FF">.</span><span style="color: #001080">title</span><span style="color: #0000FF">}</span>
+<span style="color: #000000FF">            </span><span style="color: #0000FF">{</span><span style="color: #001080">choice</span><span style="color: #000000FF">.</span><span style="color: #001080">custom</span><span style="color: #000000FF">.</span><span style="color: #001080">title</span><span style="color: #0000FF">}</span>
 <span style="color: #000000FF">          </span><span style="color: #800000">&lt;/</span><span style="color: #267F99">Radio</span><span style="color: #800000">&gt;</span>
 <span style="color: #000000FF">        )</span><span style="color: #0000FF">}</span>
 <span style="color: #000000">      </span><span style="color: #800000">&lt;/</span><span style="color: #267F99">RadioGroup</span><span style="color: #800000">&gt;</span>
@@ -332,7 +332,7 @@
 <span style="color: #000000FF">          </span><span style="color: #800000">&lt;</span><span style="color: #267F99">CheckBox</span>
 <span style="color: #000000FF">            </span><span style="color: #FF0000">value</span><span style="color: #000000">=</span><span style="color: #0000FF">{</span><span style="color: #001080">choice</span><span style="color: #000000FF">.</span><span style="color: #001080">value</span><span style="color: #0000FF">}</span>
 <span style="color: #000000FF">            </span><span style="color: #FF0000">disabled</span><span style="color: #000000">=</span><span style="color: #0000FF">{</span><span style="color: #001080">choice</span><span style="color: #000000FF">.</span><span style="color: #001080">disabled</span><span style="color: #0000FF">}</span><span style="color: #800000">&gt;</span>
-<span style="color: #000000FF">            </span><span style="color: #0000FF">{</span><span style="color: #001080">choice</span><span style="color: #000000FF">.</span><span style="color: #001080">ui</span><span style="color: #000000FF">.</span><span style="color: #001080">title</span><span style="color: #0000FF">}</span>
+<span style="color: #000000FF">            </span><span style="color: #0000FF">{</span><span style="color: #001080">choice</span><span style="color: #000000FF">.</span><span style="color: #001080">custom</span><span style="color: #000000FF">.</span><span style="color: #001080">title</span><span style="color: #0000FF">}</span>
 <span style="color: #000000FF">          </span><span style="color: #800000">&lt;/</span><span style="color: #267F99">CheckBox</span><span style="color: #800000">&gt;</span>
 <span style="color: #000000FF">        )</span><span style="color: #0000FF">}</span>
 <span style="color: #000000">      </span><span style="color: #800000">&lt;/</span><span style="color: #267F99">CheckBoxGroup</span><span style="color: #800000">&gt;</span>
@@ -340,11 +340,11 @@
 <span style="color: #000000">  };</span>
 
 <span style="color: #000000">  </span><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #795E26">renderStringInput</span><span style="color: #000000"> = (</span><span style="color: #001080">question</span><span style="color: #000000">: </span><span style="color: #267F99">QuestionRenderInstructions</span><span style="color: #000000">) </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
-<span style="color: #000000">    </span><span style="color: #0000FF">const</span><span style="color: #000000"> { </span><span style="color: #0070C1">id</span><span style="color: #000000">, </span><span style="color: #0070C1">ui</span><span style="color: #000000">, </span><span style="color: #0070C1">currentAnswer</span><span style="color: #000000">, </span><span style="color: #0070C1">error</span><span style="color: #000000"> } = </span><span style="color: #001080">question</span><span style="color: #000000">;</span>
+<span style="color: #000000">    </span><span style="color: #0000FF">const</span><span style="color: #000000"> { </span><span style="color: #0070C1">id</span><span style="color: #000000">, </span><span style="color: #0070C1">custom</span><span style="color: #000000">, </span><span style="color: #0070C1">currentAnswer</span><span style="color: #000000">, </span><span style="color: #0070C1">error</span><span style="color: #000000"> } = </span><span style="color: #001080">question</span><span style="color: #000000">;</span>
 <span style="color: #000000">    </span><span style="color: #AF00DB">return</span><span style="color: #000000"> (</span>
 <span style="color: #000000">      </span><span style="color: #800000">&lt;</span><span style="color: #267F99">TextInput</span>
 <span style="color: #000000">        </span><span style="color: #FF0000">error</span><span style="color: #000000">=</span><span style="color: #0000FF">{</span><span style="color: #001080">error</span><span style="color: #0000FF">}</span>
-<span style="color: #000000">        </span><span style="color: #FF0000">maxLength</span><span style="color: #000000">=</span><span style="color: #0000FF">{</span><span style="color: #001080">ui</span><span style="color: #000000FF">.</span><span style="color: #001080">maxLength</span><span style="color: #000000FF"> </span><span style="color: #AF00DB">as</span><span style="color: #000000FF"> </span><span style="color: #267F99">number</span><span style="color: #0000FF">}</span>
+<span style="color: #000000">        </span><span style="color: #FF0000">maxLength</span><span style="color: #000000">=</span><span style="color: #0000FF">{</span><span style="color: #001080">custom</span><span style="color: #000000FF">.</span><span style="color: #001080">maxLength</span><span style="color: #000000FF"> </span><span style="color: #AF00DB">as</span><span style="color: #000000FF"> </span><span style="color: #267F99">number</span><span style="color: #0000FF">}</span>
 <span style="color: #000000">        </span><span style="color: #FF0000">value</span><span style="color: #000000">=</span><span style="color: #0000FF">{</span><span style="color: #001080">currentAnswer</span><span style="color: #0000FF">}</span>
 <span style="color: #000000">        </span><span style="color: #FF0000">onChange</span><span style="color: #000000">=</span><span style="color: #0000FF">{</span><span style="color: #001080">e</span><span style="color: #000000FF"> </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000FF"> </span><span style="color: #001080">form</span><span style="color: #000000FF">.</span><span style="color: #795E26">setAnswer</span><span style="color: #000000FF">(</span><span style="color: #001080">id</span><span style="color: #000000FF">, </span><span style="color: #001080">e</span><span style="color: #000000FF">.</span><span style="color: #001080">target</span><span style="color: #000000FF">.</span><span style="color: #001080">value</span><span style="color: #000000FF">)</span><span style="color: #0000FF">}</span><span style="color: #000000"> </span><span style="color: #800000">/&gt;</span>
 <span style="color: #000000">    );</span>
@@ -358,8 +358,8 @@
 					<h1><strong>Setting Answers</strong></h1>
 				</a>
 				<p><code>any</code> questions use <code>setAnswer</code> method to set answer.</p>
-				<p><code>single</code> questions use <code>setChoice</code> or <code>selectChoice</code> method to set answer.</p>
-				<p><code>multiple</code> questions use <code>setChoices</code> or <code>selectChoice</code> method to set answer.</p>
+				<p><code>choice</code> questions use <code>setChoice</code> or <code>selectChoice</code> method to set answer.</p>
+				<p><code>choices</code> questions use <code>setChoices</code> or <code>selectChoice</code> method to set answer.</p>
 				<a href="#example-general" id="example-general" style="color: inherit; text-decoration: none;">
 					<h3><strong>Example (General)</strong></h3>
 				</a>
