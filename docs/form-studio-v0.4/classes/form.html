@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Form | form-studio - v0.3</title>
-	<meta name="description" content="Documentation for form-studio - v0.3">
+	<title>Form | form-studio - v0.4</title>
+	<meta name="description" content="Documentation for form-studio - v0.4">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
 	<script async src="../assets/js/search.js" id="search-script"></script>
@@ -23,7 +23,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">form-studio - v0.3</a>
+					<a href="../index.html" class="title">form-studio - v0.4</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -52,7 +52,7 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../modules.html">form-studio - v0.3</a>
+					<a href="../modules.html">form-studio - v0.4</a>
 				</li>
 				<li>
 					<a href="form.html">Form</a>
@@ -90,9 +90,12 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="form.html#clearanswer" class="tsd-kind-icon">clear<wbr>Answer</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="form.html#cleargroup" class="tsd-kind-icon">clear<wbr>Group</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="form.html#getconfigs" class="tsd-kind-icon">get<wbr>Configs</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="form.html#getcurrentanswer" class="tsd-kind-icon">get<wbr>Current<wbr>Answer</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="form.html#getcurrentanswers" class="tsd-kind-icon">get<wbr>Current<wbr>Answers</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="form.html#geterror" class="tsd-kind-icon">get<wbr>Error</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="form.html#geterrors" class="tsd-kind-icon">get<wbr>Errors</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="form.html#getrenderinstructions" class="tsd-kind-icon">get<wbr>Render<wbr>Instructions</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="form.html#getvalidatedanswer" class="tsd-kind-icon">get<wbr>Validated<wbr>Answer</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="form.html#getvalidatedanswers" class="tsd-kind-icon">get<wbr>Validated<wbr>Answers</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="form.html#importanswers" class="tsd-kind-icon">import<wbr>Answers</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="form.html#isclean" class="tsd-kind-icon">is<wbr>Clean</a></li>
@@ -101,6 +104,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="form.html#resetgroup" class="tsd-kind-icon">reset<wbr>Group</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="form.html#selectchoice" class="tsd-kind-icon">select<wbr>Choice</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="form.html#setanswer" class="tsd-kind-icon">set<wbr>Answer</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="form.html#setany" class="tsd-kind-icon">set<wbr>Any</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="form.html#setchoice" class="tsd-kind-icon">set<wbr>Choice</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="form.html#setchoices" class="tsd-kind-icon">set<wbr>Choices</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="form.html#validate" class="tsd-kind-icon">validate</a></li>
@@ -158,7 +162,7 @@
 					<a name="clear" class="tsd-anchor"></a>
 					<h3>clear</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">clear<span class="tsd-signature-symbol">(</span>skipValidations<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">clear<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">SetAnswerOptions</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -172,9 +176,9 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>skipValidations: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">SetAnswerOptions</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>skip validations</p>
+										<p>options</p>
 									</div>
 								</li>
 							</ul>
@@ -186,7 +190,7 @@
 					<a name="clearanswer" class="tsd-anchor"></a>
 					<h3>clear<wbr>Answer</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">clear<wbr>Answer<span class="tsd-signature-symbol">(</span>questionId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, skipValidation<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">clear<wbr>Answer<span class="tsd-signature-symbol">(</span>questionId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">SetAnswerOptions</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -206,9 +210,9 @@
 									</div>
 								</li>
 								<li>
-									<h5>skipValidation: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">SetAnswerOptions</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>skip validation</p>
+										<p>options</p>
 									</div>
 								</li>
 							</ul>
@@ -220,7 +224,7 @@
 					<a name="cleargroup" class="tsd-anchor"></a>
 					<h3>clear<wbr>Group</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">clear<wbr>Group<span class="tsd-signature-symbol">(</span>groupId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, skipValidations<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">clear<wbr>Group<span class="tsd-signature-symbol">(</span>groupId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">SetAnswerOptions</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -240,9 +244,9 @@
 									</div>
 								</li>
 								<li>
-									<h5>skipValidations: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">SetAnswerOptions</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>skip validations</p>
+										<p>options</p>
 									</div>
 								</li>
 							</ul>
@@ -272,6 +276,35 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getcurrentanswer" class="tsd-anchor"></a>
+					<h3>get<wbr>Current<wbr>Answer</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Current<wbr>Answer<span class="tsd-signature-symbol">(</span>questionId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get current answer of a question. The answer is unvalidated.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>questionId: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>question id</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+							<p>current answer</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="getcurrentanswers" class="tsd-anchor"></a>
 					<h3>get<wbr>Current<wbr>Answers</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -289,6 +322,36 @@
 							</div>
 							<h4 class="tsd-returns-title">Returns <a href="../modules.html#answers" class="tsd-signature-type" data-tsd-kind="Type alias">Answers</a></h4>
 							<p>current answers</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="geterror" class="tsd-anchor"></a>
+					<h3>get<wbr>Error</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Error<span class="tsd-signature-symbol">(</span>questionId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get error of a question.</p>
+								</div>
+								<p>If the question hasn&#39;t gone through validation, it will not have error, even if its answer is currently invalid.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>questionId: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>question id</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+							<p>error</p>
 						</li>
 					</ul>
 				</section>
@@ -335,6 +398,36 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getvalidatedanswer" class="tsd-anchor"></a>
+					<h3>get<wbr>Validated<wbr>Answer</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Validated<wbr>Answer<span class="tsd-signature-symbol">(</span>questionId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get validated answer of a question.</p>
+								</div>
+								<p>If the question is disabled or it&#39;s answer is not valid, it&#39;s answer will be set to <code>undefined</code>.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>questionId: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>question id</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+							<p>validated answer</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="getvalidatedanswers" class="tsd-anchor"></a>
 					<h3>get<wbr>Validated<wbr>Answers</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -360,7 +453,7 @@
 					<a name="importanswers" class="tsd-anchor"></a>
 					<h3>import<wbr>Answers</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">import<wbr>Answers<span class="tsd-signature-symbol">(</span>answers<span class="tsd-signature-symbol">: </span><a href="../modules.html#answers" class="tsd-signature-type" data-tsd-kind="Type alias">Answers</a>, skipValidations<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">import<wbr>Answers<span class="tsd-signature-symbol">(</span>answers<span class="tsd-signature-symbol">: </span><a href="../modules.html#answers" class="tsd-signature-type" data-tsd-kind="Type alias">Answers</a>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">SetAnswerOptions</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -370,11 +463,6 @@
 								<div class="lead">
 									<p>Import answers to the form.</p>
 								</div>
-								<dl class="tsd-comment-tags">
-									<dt>skipvalidations</dt>
-									<dd><p>skip validations</p>
-									</dd>
-								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -385,7 +473,10 @@
 									</div>
 								</li>
 								<li>
-									<h5>skipValidations: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">SetAnswerOptions</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>options</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -418,7 +509,7 @@
 					<a name="reset" class="tsd-anchor"></a>
 					<h3>reset</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">reset<span class="tsd-signature-symbol">(</span>skipValidations<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">reset<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">SetAnswerOptions</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -432,9 +523,9 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>skipValidations: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">SetAnswerOptions</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>skip validations</p>
+										<p>options</p>
 									</div>
 								</li>
 							</ul>
@@ -446,7 +537,7 @@
 					<a name="resetanswer" class="tsd-anchor"></a>
 					<h3>reset<wbr>Answer</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">reset<wbr>Answer<span class="tsd-signature-symbol">(</span>questionId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, skipValidation<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">reset<wbr>Answer<span class="tsd-signature-symbol">(</span>questionId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">SetAnswerOptions</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -466,9 +557,9 @@
 									</div>
 								</li>
 								<li>
-									<h5>skipValidation: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">SetAnswerOptions</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>skip validation</p>
+										<p>options</p>
 									</div>
 								</li>
 							</ul>
@@ -480,7 +571,7 @@
 					<a name="resetgroup" class="tsd-anchor"></a>
 					<h3>reset<wbr>Group</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">reset<wbr>Group<span class="tsd-signature-symbol">(</span>groupId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, skipValidations<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">reset<wbr>Group<span class="tsd-signature-symbol">(</span>groupId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">SetAnswerOptions</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -500,9 +591,9 @@
 									</div>
 								</li>
 								<li>
-									<h5>skipValidations: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">SetAnswerOptions</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>skip validations</p>
+										<p>options</p>
 									</div>
 								</li>
 							</ul>
@@ -514,7 +605,7 @@
 					<a name="selectchoice" class="tsd-anchor"></a>
 					<h3>select<wbr>Choice</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">select<wbr>Choice<span class="tsd-signature-symbol">(</span>choiceId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, selected<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span>, skipValidation<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">select<wbr>Choice<span class="tsd-signature-symbol">(</span>choiceId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, selected<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">SetAnswerOptions</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -541,9 +632,9 @@
 									</div>
 								</li>
 								<li>
-									<h5>skipValidation: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">SetAnswerOptions</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>skip validation</p>
+										<p>options</p>
 									</div>
 								</li>
 							</ul>
@@ -555,7 +646,7 @@
 					<a name="setanswer" class="tsd-anchor"></a>
 					<h3>set<wbr>Answer</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">set<wbr>Answer<span class="tsd-signature-symbol">(</span>questionId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, answer<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, skipValidation<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Answer<span class="tsd-signature-symbol">(</span>questionId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, answer<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">SetAnswerOptions</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -563,7 +654,7 @@
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Set answer of the question with <code>any</code> as <a href="../interfaces/questionconfigs.html#type">type</a>.</p>
+									<p>Set answer of a question.</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -581,9 +672,49 @@
 									</div>
 								</li>
 								<li>
-									<h5>skipValidation: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">SetAnswerOptions</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>skip validation</p>
+										<p>options</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="setany" class="tsd-anchor"></a>
+					<h3>set<wbr>Any</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Any<span class="tsd-signature-symbol">(</span>questionId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, answer<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">SetAnswerOptions</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Set answer of a question with <code>any</code> as <a href="../interfaces/questionconfigs.html#type">type</a>.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>questionId: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>question id</p>
+									</div>
+								</li>
+								<li>
+									<h5>answer: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>answer</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">SetAnswerOptions</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>options</p>
 									</div>
 								</li>
 							</ul>
@@ -595,7 +726,7 @@
 					<a name="setchoice" class="tsd-anchor"></a>
 					<h3>set<wbr>Choice</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">set<wbr>Choice<span class="tsd-signature-symbol">(</span>questionId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, skipValidation<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Choice<span class="tsd-signature-symbol">(</span>questionId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">SetAnswerOptions</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -603,7 +734,7 @@
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Set answer of the question with <code>choice</code> as <a href="../interfaces/questionconfigs.html#type">type</a>.</p>
+									<p>Set answer of a question with <code>choice</code> as <a href="../interfaces/questionconfigs.html#type">type</a>.</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -621,9 +752,9 @@
 									</div>
 								</li>
 								<li>
-									<h5>skipValidation: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">SetAnswerOptions</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>skip validation</p>
+										<p>options</p>
 									</div>
 								</li>
 							</ul>
@@ -635,7 +766,7 @@
 					<a name="setchoices" class="tsd-anchor"></a>
 					<h3>set<wbr>Choices</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">set<wbr>Choices<span class="tsd-signature-symbol">(</span>questionId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, values<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span>, skipValidation<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Choices<span class="tsd-signature-symbol">(</span>questionId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, values<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">SetAnswerOptions</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -643,7 +774,7 @@
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Set answers of the question with <code>choices</code> as <a href="../interfaces/questionconfigs.html#type">type</a>.</p>
+									<p>Set answers of a question with <code>choices</code> as <a href="../interfaces/questionconfigs.html#type">type</a>.</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -661,9 +792,9 @@
 									</div>
 								</li>
 								<li>
-									<h5>skipValidation: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">SetAnswerOptions</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>skip validation</p>
+										<p>options</p>
 									</div>
 								</li>
 							</ul>
@@ -772,13 +903,22 @@
 								<a href="form.html#getconfigs" class="tsd-kind-icon">get<wbr>Configs</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="form.html#getcurrentanswer" class="tsd-kind-icon">get<wbr>Current<wbr>Answer</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="form.html#getcurrentanswers" class="tsd-kind-icon">get<wbr>Current<wbr>Answers</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="form.html#geterror" class="tsd-kind-icon">get<wbr>Error</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="form.html#geterrors" class="tsd-kind-icon">get<wbr>Errors</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="form.html#getrenderinstructions" class="tsd-kind-icon">get<wbr>Render<wbr>Instructions</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="form.html#getvalidatedanswer" class="tsd-kind-icon">get<wbr>Validated<wbr>Answer</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="form.html#getvalidatedanswers" class="tsd-kind-icon">get<wbr>Validated<wbr>Answers</a>
@@ -803,6 +943,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="form.html#setanswer" class="tsd-kind-icon">set<wbr>Answer</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="form.html#setany" class="tsd-kind-icon">set<wbr>Any</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="form.html#setchoice" class="tsd-kind-icon">set<wbr>Choice</a>
