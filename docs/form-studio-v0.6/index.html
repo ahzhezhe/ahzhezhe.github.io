@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>form-studio - v0.5</title>
-	<meta name="description" content="Documentation for form-studio - v0.5">
+	<title>form-studio - v0.6</title>
+	<meta name="description" content="Documentation for form-studio - v0.6">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="assets/css/main.css">
 	<script async src="assets/js/search.js" id="search-script"></script>
@@ -23,7 +23,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="index.html" class="title">form-studio - v0.5</a>
+					<a href="index.html" class="title">form-studio - v0.6</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -50,7 +50,7 @@
 	</div>
 	<div class="tsd-page-title">
 		<div class="container">
-			<h1>form-studio - v0.5</h1>
+			<h1>form-studio - v0.6</h1>
 		</div>
 	</div>
 </header>
@@ -83,7 +83,7 @@
 					<li>Any UI components, define your own UI configurations that suit your project needs and render the UI according to your own design system.</li>
 					<li>Validators, define your own validators that suit your project needs.</li>
 				</ul>
-				<p><a href="https://ahzhezhe.github.io/docs/form-studio-v0.5/index.html">API Documentation</a></p>
+				<p><a href="https://ahzhezhe.github.io/docs/form-studio-v0.6/index.html">API Documentation</a></p>
 				<p><a href="https://github.com/ahzhezhe/form-studio-demo">Demo</a></p>
 				<br />
 				<a href="#install-via-npm" id="install-via-npm" style="color: inherit; text-decoration: none;">
@@ -140,47 +140,49 @@
 				</a>
 				<p>The following example consists of 1 group and 2 questions under it.</p>
 				<p>The second question is disabled by default. If &#39;yes&#39; is selected for the first question, the second question will be enabled.</p>
-				<pre><code class="language-json"><span style="color: #000000">[</span>
-<span style="color: #000000">  {</span>
-<span style="color: #000000">    </span><span style="color: #0451A5">&quot;questions&quot;</span><span style="color: #000000">: [</span>
-<span style="color: #000000">      {</span>
-<span style="color: #000000">        </span><span style="color: #0451A5">&quot;id&quot;</span><span style="color: #000000">: </span><span style="color: #A31515">&quot;proceed&quot;</span><span style="color: #000000">,</span>
-<span style="color: #000000">        </span><span style="color: #0451A5">&quot;type&quot;</span><span style="color: #000000">: </span><span style="color: #A31515">&quot;choice&quot;</span><span style="color: #000000">,</span>
-<span style="color: #000000">        </span><span style="color: #0451A5">&quot;custom&quot;</span><span style="color: #000000">: {</span>
-<span style="color: #000000">          </span><span style="color: #0451A5">&quot;title&quot;</span><span style="color: #000000">: </span><span style="color: #A31515">&quot;Would you like to proceed?&quot;</span>
-<span style="color: #000000">        },</span>
-<span style="color: #000000">        </span><span style="color: #0451A5">&quot;choices&quot;</span><span style="color: #000000">: [</span>
-<span style="color: #000000">          {</span>
-<span style="color: #000000">            </span><span style="color: #0451A5">&quot;value&quot;</span><span style="color: #000000">: </span><span style="color: #A31515">&quot;yes&quot;</span><span style="color: #000000">,</span>
-<span style="color: #000000">            </span><span style="color: #0451A5">&quot;custom&quot;</span><span style="color: #000000">: {</span>
-<span style="color: #000000">              </span><span style="color: #0451A5">&quot;title&quot;</span><span style="color: #000000">: </span><span style="color: #A31515">&quot;Yes&quot;</span>
-<span style="color: #000000">            },</span>
-<span style="color: #000000">            </span><span style="color: #0451A5">&quot;onSelected&quot;</span><span style="color: #000000">: {</span>
-<span style="color: #000000">              </span><span style="color: #0451A5">&quot;enable&quot;</span><span style="color: #000000">: [</span>
-<span style="color: #000000">                </span><span style="color: #A31515">&quot;name&quot;</span>
-<span style="color: #000000">              ]</span>
-<span style="color: #000000">            }</span>
+				<pre><code class="language-json"><span style="color: #000000">{</span>
+<span style="color: #000000">  </span><span style="color: #0451A5">&quot;groups&quot;</span><span style="color: #000000">: [</span>
+<span style="color: #000000">    {</span>
+<span style="color: #000000">      </span><span style="color: #0451A5">&quot;questions&quot;</span><span style="color: #000000">: [</span>
+<span style="color: #000000">        {</span>
+<span style="color: #000000">          </span><span style="color: #0451A5">&quot;id&quot;</span><span style="color: #000000">: </span><span style="color: #A31515">&quot;proceed&quot;</span><span style="color: #000000">,</span>
+<span style="color: #000000">          </span><span style="color: #0451A5">&quot;type&quot;</span><span style="color: #000000">: </span><span style="color: #A31515">&quot;choice&quot;</span><span style="color: #000000">,</span>
+<span style="color: #000000">          </span><span style="color: #0451A5">&quot;custom&quot;</span><span style="color: #000000">: {</span>
+<span style="color: #000000">            </span><span style="color: #0451A5">&quot;title&quot;</span><span style="color: #000000">: </span><span style="color: #A31515">&quot;Would you like to proceed?&quot;</span>
 <span style="color: #000000">          },</span>
-<span style="color: #000000">          {</span>
-<span style="color: #000000">            </span><span style="color: #0451A5">&quot;value&quot;</span><span style="color: #000000">: </span><span style="color: #A31515">&quot;no&quot;</span><span style="color: #000000">,</span>
-<span style="color: #000000">            </span><span style="color: #0451A5">&quot;custom&quot;</span><span style="color: #000000">: {</span>
-<span style="color: #000000">              </span><span style="color: #0451A5">&quot;title&quot;</span><span style="color: #000000">: </span><span style="color: #A31515">&quot;No&quot;</span>
+<span style="color: #000000">          </span><span style="color: #0451A5">&quot;choices&quot;</span><span style="color: #000000">: [</span>
+<span style="color: #000000">            {</span>
+<span style="color: #000000">              </span><span style="color: #0451A5">&quot;value&quot;</span><span style="color: #000000">: </span><span style="color: #A31515">&quot;yes&quot;</span><span style="color: #000000">,</span>
+<span style="color: #000000">              </span><span style="color: #0451A5">&quot;custom&quot;</span><span style="color: #000000">: {</span>
+<span style="color: #000000">                </span><span style="color: #0451A5">&quot;title&quot;</span><span style="color: #000000">: </span><span style="color: #A31515">&quot;Yes&quot;</span>
+<span style="color: #000000">              },</span>
+<span style="color: #000000">              </span><span style="color: #0451A5">&quot;onSelected&quot;</span><span style="color: #000000">: {</span>
+<span style="color: #000000">                </span><span style="color: #0451A5">&quot;enable&quot;</span><span style="color: #000000">: [</span>
+<span style="color: #000000">                  </span><span style="color: #A31515">&quot;name&quot;</span>
+<span style="color: #000000">                ]</span>
+<span style="color: #000000">              }</span>
+<span style="color: #000000">            },</span>
+<span style="color: #000000">            {</span>
+<span style="color: #000000">              </span><span style="color: #0451A5">&quot;value&quot;</span><span style="color: #000000">: </span><span style="color: #A31515">&quot;no&quot;</span><span style="color: #000000">,</span>
+<span style="color: #000000">              </span><span style="color: #0451A5">&quot;custom&quot;</span><span style="color: #000000">: {</span>
+<span style="color: #000000">                </span><span style="color: #0451A5">&quot;title&quot;</span><span style="color: #000000">: </span><span style="color: #A31515">&quot;No&quot;</span>
+<span style="color: #000000">              }</span>
 <span style="color: #000000">            }</span>
-<span style="color: #000000">          }</span>
-<span style="color: #000000">        ],</span>
-<span style="color: #000000">      },</span>
-<span style="color: #000000">      {</span>
-<span style="color: #000000">        </span><span style="color: #0451A5">&quot;id&quot;</span><span style="color: #000000">: </span><span style="color: #A31515">&quot;name&quot;</span><span style="color: #000000">,</span>
-<span style="color: #000000">        </span><span style="color: #0451A5">&quot;defaultDisabled&quot;</span><span style="color: #000000">: </span><span style="color: #0000FF">true</span><span style="color: #000000">,</span>
-<span style="color: #000000">        </span><span style="color: #0451A5">&quot;type&quot;</span><span style="color: #000000">: </span><span style="color: #A31515">&quot;any&quot;</span><span style="color: #000000">,</span>
-<span style="color: #000000">        </span><span style="color: #0451A5">&quot;custom&quot;</span><span style="color: #000000">: {</span>
-<span style="color: #000000">          </span><span style="color: #0451A5">&quot;type&quot;</span><span style="color: #000000">: </span><span style="color: #A31515">&quot;string&quot;</span><span style="color: #000000">,</span>
-<span style="color: #000000">          </span><span style="color: #0451A5">&quot;title&quot;</span><span style="color: #000000">: </span><span style="color: #A31515">&quot;What is you name?&quot;</span><span style="color: #000000">,</span>
+<span style="color: #000000">          ],</span>
 <span style="color: #000000">        },</span>
-<span style="color: #000000">      }</span>
-<span style="color: #000000">    ]</span>
-<span style="color: #000000">  }</span>
-<span style="color: #000000">]</span>
+<span style="color: #000000">        {</span>
+<span style="color: #000000">          </span><span style="color: #0451A5">&quot;id&quot;</span><span style="color: #000000">: </span><span style="color: #A31515">&quot;name&quot;</span><span style="color: #000000">,</span>
+<span style="color: #000000">          </span><span style="color: #0451A5">&quot;defaultDisabled&quot;</span><span style="color: #000000">: </span><span style="color: #0000FF">true</span><span style="color: #000000">,</span>
+<span style="color: #000000">          </span><span style="color: #0451A5">&quot;type&quot;</span><span style="color: #000000">: </span><span style="color: #A31515">&quot;any&quot;</span><span style="color: #000000">,</span>
+<span style="color: #000000">          </span><span style="color: #0451A5">&quot;custom&quot;</span><span style="color: #000000">: {</span>
+<span style="color: #000000">            </span><span style="color: #0451A5">&quot;type&quot;</span><span style="color: #000000">: </span><span style="color: #A31515">&quot;string&quot;</span><span style="color: #000000">,</span>
+<span style="color: #000000">            </span><span style="color: #0451A5">&quot;title&quot;</span><span style="color: #000000">: </span><span style="color: #A31515">&quot;What is you name?&quot;</span><span style="color: #000000">,</span>
+<span style="color: #000000">          },</span>
+<span style="color: #000000">        }</span>
+<span style="color: #000000">      ]</span>
+<span style="color: #000000">    }</span>
+<span style="color: #000000">  ]</span>
+<span style="color: #000000">}</span>
 </code></pre>
 				<a href="#validate-configs" id="validate-configs" style="color: inherit; text-decoration: none;">
 					<h3><strong>Validate Configs</strong></h3>
@@ -232,7 +234,7 @@
 				<a href="#example-react" id="example-react" style="color: inherit; text-decoration: none;">
 					<h3><strong>Example (React)</strong></h3>
 				</a>
-				<pre><code class="language-javascript"><span style="color: #0000FF">const</span><span style="color: #000000"> [</span><span style="color: #0070C1">renderInstructions</span><span style="color: #000000">, </span><span style="color: #0070C1">setRenderInstructions</span><span style="color: #000000">] = </span><span style="color: #795E26">useState</span><span style="color: #000000">();</span>
+				<pre><code class="language-javascript"><span style="color: #0000FF">const</span><span style="color: #000000"> [</span><span style="color: #0070C1">renderInstructions</span><span style="color: #000000">, </span><span style="color: #0070C1">setRenderInstructions</span><span style="color: #000000">] = </span><span style="color: #795E26">useState</span><span style="color: #000000">&lt;</span><span style="color: #267F99">RenderInstructions</span><span style="color: #000000">&gt;();</span>
 
 <span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #795E26">onFormUpdate</span><span style="color: #000000"> = </span><span style="color: #001080">form</span><span style="color: #000000"> </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> </span><span style="color: #795E26">setRenderInstructions</span><span style="color: #000000">(</span><span style="color: #001080">form</span><span style="color: #000000">.</span><span style="color: #795E26">getRenderInstructions</span><span style="color: #000000">());</span>
 </code></pre>
@@ -273,7 +275,7 @@
 				<pre><code class="language-javascript"><span style="color: #0000FF">let</span><span style="color: #000000"> </span><span style="color: #001080">form</span><span style="color: #000000">: </span><span style="color: #267F99">Form</span><span style="color: #000000">;</span>
 
 <span style="color: #AF00DB">export</span><span style="color: #000000"> </span><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #795E26">SurveyPage</span><span style="color: #000000"> = () </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
-<span style="color: #000000">  </span><span style="color: #0000FF">const</span><span style="color: #000000"> [</span><span style="color: #0070C1">renderInstructions</span><span style="color: #000000">, </span><span style="color: #0070C1">setRenderInstructions</span><span style="color: #000000">] = </span><span style="color: #795E26">useState</span><span style="color: #000000">&lt;</span><span style="color: #267F99">GroupRenderInstructions</span><span style="color: #000000">[]&gt;([]);</span>
+<span style="color: #000000">  </span><span style="color: #0000FF">const</span><span style="color: #000000"> [</span><span style="color: #0070C1">renderInstructions</span><span style="color: #000000">, </span><span style="color: #0070C1">setRenderInstructions</span><span style="color: #000000">] = </span><span style="color: #795E26">useState</span><span style="color: #000000">&lt;</span><span style="color: #267F99">RenderInstructions</span><span style="color: #000000">&gt;();</span>
 
 <span style="color: #000000">  </span><span style="color: #795E26">useEffect</span><span style="color: #000000">(() </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
 <span style="color: #000000">    </span><span style="color: #001080">form</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #795E26">Form</span><span style="color: #000000">(</span><span style="color: #001080">configs</span><span style="color: #000000">, {</span>
@@ -346,31 +348,31 @@
 <span style="color: #000000">        </span><span style="color: #FF0000">error</span><span style="color: #000000">=</span><span style="color: #0000FF">{</span><span style="color: #001080">error</span><span style="color: #0000FF">}</span>
 <span style="color: #000000">        </span><span style="color: #FF0000">maxLength</span><span style="color: #000000">=</span><span style="color: #0000FF">{</span><span style="color: #001080">custom</span><span style="color: #000000FF">.</span><span style="color: #001080">maxLength</span><span style="color: #000000FF"> </span><span style="color: #AF00DB">as</span><span style="color: #000000FF"> </span><span style="color: #267F99">number</span><span style="color: #0000FF">}</span>
 <span style="color: #000000">        </span><span style="color: #FF0000">value</span><span style="color: #000000">=</span><span style="color: #0000FF">{</span><span style="color: #001080">currentAnswer</span><span style="color: #0000FF">}</span>
-<span style="color: #000000">        </span><span style="color: #FF0000">onChange</span><span style="color: #000000">=</span><span style="color: #0000FF">{</span><span style="color: #001080">e</span><span style="color: #000000FF"> </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000FF"> </span><span style="color: #001080">form</span><span style="color: #000000FF">.</span><span style="color: #795E26">setAnswer</span><span style="color: #000000FF">(</span><span style="color: #001080">id</span><span style="color: #000000FF">, </span><span style="color: #001080">e</span><span style="color: #000000FF">.</span><span style="color: #001080">target</span><span style="color: #000000FF">.</span><span style="color: #001080">value</span><span style="color: #000000FF">)</span><span style="color: #0000FF">}</span><span style="color: #000000"> </span><span style="color: #800000">/&gt;</span>
+<span style="color: #000000">        </span><span style="color: #FF0000">onChange</span><span style="color: #000000">=</span><span style="color: #0000FF">{</span><span style="color: #001080">e</span><span style="color: #000000FF"> </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000FF"> </span><span style="color: #001080">form</span><span style="color: #000000FF">.</span><span style="color: #795E26">setAny</span><span style="color: #000000FF">(</span><span style="color: #001080">id</span><span style="color: #000000FF">, </span><span style="color: #001080">e</span><span style="color: #000000FF">.</span><span style="color: #001080">target</span><span style="color: #000000FF">.</span><span style="color: #001080">value</span><span style="color: #000000FF">)</span><span style="color: #0000FF">}</span><span style="color: #000000"> </span><span style="color: #800000">/&gt;</span>
 <span style="color: #000000">    );</span>
 <span style="color: #000000">  };</span>
 
-<span style="color: #000000">  </span><span style="color: #AF00DB">return</span><span style="color: #000000"> </span><span style="color: #001080">renderInstructions</span><span style="color: #000000">[</span><span style="color: #098658">0</span><span style="color: #000000">].</span><span style="color: #001080">questions</span><span style="color: #000000">.</span><span style="color: #795E26">map</span><span style="color: #000000">(</span><span style="color: #001080">question</span><span style="color: #000000"> </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> </span><span style="color: #795E26">renderQuestion</span><span style="color: #000000">(</span><span style="color: #001080">question</span><span style="color: #000000">));</span>
+<span style="color: #000000">  </span><span style="color: #AF00DB">return</span><span style="color: #000000"> </span><span style="color: #001080">renderInstructions</span><span style="color: #000000">?.</span><span style="color: #001080">questions</span><span style="color: #000000">.</span><span style="color: #795E26">map</span><span style="color: #000000">(</span><span style="color: #001080">question</span><span style="color: #000000"> </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> </span><span style="color: #795E26">renderQuestion</span><span style="color: #000000">(</span><span style="color: #001080">question</span><span style="color: #000000">));</span>
 <span style="color: #000000">};</span>
 </code></pre>
 				<br />
 				<a href="#setting-answers" id="setting-answers" style="color: inherit; text-decoration: none;">
 					<h1><strong>Setting Answers</strong></h1>
 				</a>
-				<p><code>any</code> questions use <code>setAnswer</code> method to set answer.</p>
-				<p><code>choice</code> questions use <code>setChoice</code> or <code>selectChoice</code> method to set answer.</p>
-				<p><code>choices</code> questions use <code>setChoices</code> or <code>selectChoice</code> method to set answer.</p>
+				<p><code>any</code> questions use <code>setAnswer</code> or <code>setAny</code> method to set answer.</p>
+				<p><code>choice</code> questions use <code>setAnswer</code>, <code>setChoice</code> or <code>selectChoice</code> method to set answer.</p>
+				<p><code>choices</code> questions use <code>setAnswer</code>, <code>setChoices</code> or <code>selectChoice</code> method to set answer.</p>
 				<a href="#example-general" id="example-general" style="color: inherit; text-decoration: none;">
 					<h3><strong>Example (General)</strong></h3>
 				</a>
 				<pre><code class="language-javascript"><span style="color: #001080">form</span><span style="color: #000000">.</span><span style="color: #795E26">setChoice</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;proceed&#039;</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;yes&#039;</span><span style="color: #000000">);</span>
-<span style="color: #001080">form</span><span style="color: #000000">.</span><span style="color: #795E26">setAnswer</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;name&#039;</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;Jason&#039;</span><span style="color: #000000">);</span>
+<span style="color: #001080">form</span><span style="color: #000000">.</span><span style="color: #795E26">setAny</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;name&#039;</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;Jason&#039;</span><span style="color: #000000">);</span>
 </code></pre>
 				<a href="#example-frontend" id="example-frontend" style="color: inherit; text-decoration: none;">
 					<h3><strong>Example (Frontend)</strong></h3>
 				</a>
 				<pre><code class="language-javascript"><span style="color: #001080">onChange</span><span style="color: #000000">={</span><span style="color: #001080">e</span><span style="color: #000000"> </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> </span><span style="color: #001080">form</span><span style="color: #000000">.</span><span style="color: #795E26">setChoice</span><span style="color: #000000">(</span><span style="color: #001080">id</span><span style="color: #000000">, </span><span style="color: #001080">e</span><span style="color: #000000">.</span><span style="color: #001080">target</span><span style="color: #000000">.</span><span style="color: #001080">value</span><span style="color: #000000">)}</span>
-<span style="color: #001080">onChange</span><span style="color: #000000">={</span><span style="color: #001080">e</span><span style="color: #000000"> </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> </span><span style="color: #001080">form</span><span style="color: #000000">.</span><span style="color: #795E26">setAnswer</span><span style="color: #000000">(</span><span style="color: #001080">id</span><span style="color: #000000">, </span><span style="color: #001080">e</span><span style="color: #000000">.</span><span style="color: #001080">target</span><span style="color: #000000">.</span><span style="color: #001080">value</span><span style="color: #000000">)}</span>
+<span style="color: #001080">onChange</span><span style="color: #000000">={</span><span style="color: #001080">e</span><span style="color: #000000"> </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> </span><span style="color: #001080">form</span><span style="color: #000000">.</span><span style="color: #795E26">setAny</span><span style="color: #000000">(</span><span style="color: #001080">id</span><span style="color: #000000">, </span><span style="color: #001080">e</span><span style="color: #000000">.</span><span style="color: #001080">target</span><span style="color: #000000">.</span><span style="color: #001080">value</span><span style="color: #000000">)}</span>
 </code></pre>
 				<br />
 				<a href="#validate-and-persist-the-answers" id="validate-and-persist-the-answers" style="color: inherit; text-decoration: none;">
@@ -469,6 +471,9 @@
 						<a href="interfaces/choicerenderinstructions.html" class="tsd-kind-icon">Choice<wbr>Render<wbr>Instructions</a>
 					</li>
 					<li class=" tsd-kind-interface">
+						<a href="interfaces/formoptions.html" class="tsd-kind-icon">Form<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-interface">
 						<a href="interfaces/group.html" class="tsd-kind-icon">Group</a>
 					</li>
 					<li class=" tsd-kind-interface">
@@ -485,6 +490,12 @@
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/questionrenderinstructions.html" class="tsd-kind-icon">Question<wbr>Render<wbr>Instructions</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/renderinstructions.html" class="tsd-kind-icon">Render<wbr>Instructions</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/updateansweroptions.html" class="tsd-kind-icon">Update<wbr>Answer<wbr>Options</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
 						<a href="modules.html#answers" class="tsd-kind-icon">Answers</a>
@@ -505,19 +516,10 @@
 						<a href="modules.html#exportedconfigs" class="tsd-kind-icon">Exported<wbr>Configs</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
-						<a href="modules.html#formoptions" class="tsd-kind-icon">Form<wbr>Options</a>
-					</li>
-					<li class=" tsd-kind-type-alias">
 						<a href="modules.html#formupdatelistener" class="tsd-kind-icon">Form<wbr>Update<wbr>Listener</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
 						<a href="modules.html#questiontype" class="tsd-kind-icon">Question<wbr>Type</a>
-					</li>
-					<li class=" tsd-kind-type-alias">
-						<a href="modules.html#renderinstructions" class="tsd-kind-icon">Render<wbr>Instructions</a>
-					</li>
-					<li class=" tsd-kind-type-alias">
-						<a href="modules.html#updateansweroptions" class="tsd-kind-icon">Update<wbr>Answer<wbr>Options</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
 						<a href="modules.html#validator" class="tsd-kind-icon">Validator</a>

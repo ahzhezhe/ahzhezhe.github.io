@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>GroupConfigs | form-studio - v0.5</title>
-	<meta name="description" content="Documentation for form-studio - v0.5">
+	<title>ChoiceRenderInstructions | form-studio - v0.6</title>
+	<meta name="description" content="Documentation for form-studio - v0.6">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
 	<script async src="../assets/js/search.js" id="search-script"></script>
@@ -23,7 +23,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">form-studio - v0.5</a>
+					<a href="../index.html" class="title">form-studio - v0.6</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -52,13 +52,13 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../modules.html">form-studio - v0.5</a>
+					<a href="../modules.html">form-studio - v0.6</a>
 				</li>
 				<li>
-					<a href="groupconfigs.html">GroupConfigs</a>
+					<a href="choicerenderinstructions.html">ChoiceRenderInstructions</a>
 				</li>
 			</ul>
-			<h1>Interface GroupConfigs</h1>
+			<h1>Interface ChoiceRenderInstructions</h1>
 		</div>
 	</div>
 </header>
@@ -69,10 +69,10 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="tsd-signature-type">ItemConfigs</span>
+						<span class="tsd-signature-type">ItemRenderInstructions</span>
 						<ul class="tsd-hierarchy">
 							<li>
-								<span class="target">GroupConfigs</span>
+								<span class="target">ChoiceRenderInstructions</span>
 							</li>
 						</ul>
 					</li>
@@ -85,11 +85,10 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="groupconfigs.html#custom" class="tsd-kind-icon">custom</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="groupconfigs.html#defaultdisabled" class="tsd-kind-icon">default<wbr>Disabled</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="groupconfigs.html#groups" class="tsd-kind-icon">groups</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="groupconfigs.html#id" class="tsd-kind-icon">id</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="groupconfigs.html#questions" class="tsd-kind-icon">questions</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="choicerenderinstructions.html#custom" class="tsd-kind-icon">custom</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="choicerenderinstructions.html#disabled" class="tsd-kind-icon">disabled</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="choicerenderinstructions.html#id" class="tsd-kind-icon">id</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="choicerenderinstructions.html#value" class="tsd-kind-icon">value</a></li>
 							</ul>
 						</section>
 					</div>
@@ -99,66 +98,52 @@
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="custom" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> custom</h3>
+					<h3>custom</h3>
 					<div class="tsd-signature tsd-kind-icon">custom<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from ItemConfigs.custom</p>
+						<p>Inherited from ItemRenderInstructions.custom</p>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>Any values that help you determine on how to render the frontend UI or how to perform validation.</p>
+							<p>Any values that help you determine how to render the frontend UI.</p>
 						</div>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-					<a name="defaultdisabled" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> default<wbr>Disabled</h3>
-					<div class="tsd-signature tsd-kind-icon">default<wbr>Disabled<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<a name="disabled" class="tsd-anchor"></a>
+					<h3>disabled</h3>
+					<div class="tsd-signature tsd-kind-icon">disabled<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from ItemConfigs.defaultDisabled</p>
+						<p>Inherited from ItemRenderInstructions.disabled</p>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>Whether or not this item is disabled by default.</p>
-						</div>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="groups" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> groups</h3>
-					<div class="tsd-signature tsd-kind-icon">groups<span class="tsd-signature-symbol">:</span> <a href="groupconfigs.html" class="tsd-signature-type" data-tsd-kind="Interface">GroupConfigs</a><span class="tsd-signature-symbol">[]</span></div>
-					<aside class="tsd-sources">
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>Sub-groups.</p>
+							<p>Whether or not this item is disabled.</p>
 						</div>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="id" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> id</h3>
+					<h3>id</h3>
 					<div class="tsd-signature tsd-kind-icon">id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from ItemConfigs.id</p>
+						<p>Inherited from ItemRenderInstructions.id</p>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Item id.</p>
 						</div>
-						<p>It should be unique throughout the entire form.</p>
-						<p>It will be auto generated if you leave it falsy.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="questions" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> questions</h3>
-					<div class="tsd-signature tsd-kind-icon">questions<span class="tsd-signature-symbol">:</span> <a href="questionconfigs.html" class="tsd-signature-type" data-tsd-kind="Interface">QuestionConfigs</a><span class="tsd-signature-symbol">[]</span></div>
+					<a name="value" class="tsd-anchor"></a>
+					<h3>value</h3>
+					<div class="tsd-signature tsd-kind-icon">value<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
 					<aside class="tsd-sources">
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>Questions under this group.</p>
+							<p>Value of this choice. It will be used as answer of the question.</p>
 						</div>
 					</div>
 				</section>
@@ -183,36 +168,36 @@
 					<li class=" tsd-kind-interface">
 						<a href="choiceconfigs.html" class="tsd-kind-icon">Choice<wbr>Configs</a>
 					</li>
-					<li class=" tsd-kind-interface">
-						<a href="choicerenderinstructions.html" class="tsd-kind-icon">Choice<wbr>Render<wbr>Instructions</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="group.html" class="tsd-kind-icon">Group</a>
-					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface">
-						<a href="groupconfigs.html" class="tsd-kind-icon">Group<wbr>Configs</a>
+						<a href="choicerenderinstructions.html" class="tsd-kind-icon">Choice<wbr>Render<wbr>Instructions</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-								<a href="groupconfigs.html#custom" class="tsd-kind-icon">custom</a>
+								<a href="choicerenderinstructions.html#custom" class="tsd-kind-icon">custom</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-								<a href="groupconfigs.html#defaultdisabled" class="tsd-kind-icon">default<wbr>Disabled</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="groupconfigs.html#groups" class="tsd-kind-icon">groups</a>
+								<a href="choicerenderinstructions.html#disabled" class="tsd-kind-icon">disabled</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-								<a href="groupconfigs.html#id" class="tsd-kind-icon">id</a>
+								<a href="choicerenderinstructions.html#id" class="tsd-kind-icon">id</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="groupconfigs.html#questions" class="tsd-kind-icon">questions</a>
+								<a href="choicerenderinstructions.html#value" class="tsd-kind-icon">value</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
+					<li class=" tsd-kind-interface">
+						<a href="formoptions.html" class="tsd-kind-icon">Form<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="group.html" class="tsd-kind-icon">Group</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="groupconfigs.html" class="tsd-kind-icon">Group<wbr>Configs</a>
+					</li>
 					<li class=" tsd-kind-interface">
 						<a href="grouprenderinstructions.html" class="tsd-kind-icon">Group<wbr>Render<wbr>Instructions</a>
 					</li>
@@ -224,6 +209,12 @@
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="questionrenderinstructions.html" class="tsd-kind-icon">Question<wbr>Render<wbr>Instructions</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="renderinstructions.html" class="tsd-kind-icon">Render<wbr>Instructions</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="updateansweroptions.html" class="tsd-kind-icon">Update<wbr>Answer<wbr>Options</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
 						<a href="../modules.html#answers" class="tsd-kind-icon">Answers</a>
@@ -244,19 +235,10 @@
 						<a href="../modules.html#exportedconfigs" class="tsd-kind-icon">Exported<wbr>Configs</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
-						<a href="../modules.html#formoptions" class="tsd-kind-icon">Form<wbr>Options</a>
-					</li>
-					<li class=" tsd-kind-type-alias">
 						<a href="../modules.html#formupdatelistener" class="tsd-kind-icon">Form<wbr>Update<wbr>Listener</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
 						<a href="../modules.html#questiontype" class="tsd-kind-icon">Question<wbr>Type</a>
-					</li>
-					<li class=" tsd-kind-type-alias">
-						<a href="../modules.html#renderinstructions" class="tsd-kind-icon">Render<wbr>Instructions</a>
-					</li>
-					<li class=" tsd-kind-type-alias">
-						<a href="../modules.html#updateansweroptions" class="tsd-kind-icon">Update<wbr>Answer<wbr>Options</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
 						<a href="../modules.html#validator" class="tsd-kind-icon">Validator</a>
