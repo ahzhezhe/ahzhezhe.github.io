@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class="default no-js"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>form-studio - v0.9</title><meta name="description" content="Documentation for form-studio - v0.9"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="assets/style.css"/><link rel="stylesheet" href="assets/highlight.css"/><script async src="assets/search.js" id="search-script"></script></head><body><script>document.body.classList.add(localStorage.getItem(&quot;tsd-theme&quot;) || &quot;os&quot;)</script><header><div class="tsd-page-toolbar"><div class="container"><div class="table-wrap"><div class="table-cell" id="tsd-search" data-base="."><div class="field"><label for="tsd-search-field" class="tsd-widget search no-caption">Search</label><input type="text" id="tsd-search-field"/></div><ul class="results"><li class="state loading">Preparing search index...</li><li class="state failure">The search index is not available</li></ul><a href="index.html" class="title">form-studio - v0.9</a></div><div class="table-cell" id="tsd-widgets"><div id="tsd-filter"><a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a><div class="tsd-filter-group"><div class="tsd-select" id="tsd-filter-visibility"><span class="tsd-select-label">All</span><ul class="tsd-select-list"><li data-value="public">Public</li><li data-value="protected">Public/Protected</li><li data-value="private" class="selected">All</li></ul></div> <input type="checkbox" id="tsd-filter-inherited" checked/><label class="tsd-widget" for="tsd-filter-inherited">Inherited</label><input type="checkbox" id="tsd-filter-externals" checked/><label class="tsd-widget" for="tsd-filter-externals">Externals</label></div></div><a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a></div></div></div></div><div class="tsd-page-title"><div class="container"><h1>form-studio - v0.9</h1></div></div></header><div class="container container-main"><div class="row"><div class="col-8 col-content"><div class="tsd-panel tsd-typography">
+<!DOCTYPE html><html class="default no-js"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>form-studio - v0.10</title><meta name="description" content="Documentation for form-studio - v0.10"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="assets/style.css"/><link rel="stylesheet" href="assets/highlight.css"/><script async src="assets/search.js" id="search-script"></script></head><body><script>document.body.classList.add(localStorage.getItem(&quot;tsd-theme&quot;) || &quot;os&quot;)</script><header><div class="tsd-page-toolbar"><div class="container"><div class="table-wrap"><div class="table-cell" id="tsd-search" data-base="."><div class="field"><label for="tsd-search-field" class="tsd-widget search no-caption">Search</label><input type="text" id="tsd-search-field"/></div><ul class="results"><li class="state loading">Preparing search index...</li><li class="state failure">The search index is not available</li></ul><a href="index.html" class="title">form-studio - v0.10</a></div><div class="table-cell" id="tsd-widgets"><div id="tsd-filter"><a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a><div class="tsd-filter-group"><div class="tsd-select" id="tsd-filter-visibility"><span class="tsd-select-label">All</span><ul class="tsd-select-list"><li data-value="public">Public</li><li data-value="protected">Public/Protected</li><li data-value="private" class="selected">All</li></ul></div> <input type="checkbox" id="tsd-filter-inherited" checked/><label class="tsd-widget" for="tsd-filter-inherited">Inherited</label><input type="checkbox" id="tsd-filter-externals" checked/><label class="tsd-widget" for="tsd-filter-externals">Externals</label></div></div><a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a></div></div></div></div><div class="tsd-page-title"><div class="container"><h1>form-studio - v0.10</h1></div></div></header><div class="container container-main"><div class="row"><div class="col-8 col-content"><div class="tsd-panel tsd-typography">
 <a href="#form-studio" id="form-studio" style="color: inherit; text-decoration: none;">
   <h1><strong>form-studio</strong></h1>
 </a>
@@ -26,7 +26,7 @@
 <li>Any UI components, define your own UI configurations that suit your project needs and render the UI according to your own design system.</li>
 <li>Validators, define your own validators that suit your project needs.</li>
 </ul>
-<p><a href="https://ahzhezhe.github.io/docs/form-studio-v0.9/index.html">API Documentation</a></p>
+<p><a href="https://ahzhezhe.github.io/docs/form-studio-v0.10/index.html">API Documentation</a></p>
 <p><a href="https://github.com/ahzhezhe/form-studio-demo">Demo</a></p>
 <br />
 
@@ -110,7 +110,7 @@
 </a>
 <p><code>form-studio</code> doesn&#39;t come with any predefined validator. You need to define your own validators according to your project needs.</p>
 <p>A validator is a function that will be called when the answer of a question is updated, it throws error when validation fails.</p>
-<p>Each question can be assigned with a name of the validator to be used and a set of validation configs to be used by the validator.</p>
+<p>Each question can be assigned with one or more validators to be used.</p>
 
 <a href="#example-1" id="example-1" style="color: inherit; text-decoration: none;">
   <h3><strong>Example</strong></h3>
@@ -125,7 +125,7 @@
 </a>
 <p>A listener function that will be called when form is updated.</p>
 <p>Form will be updated when answer is set, validation is triggered, etc.</p>
-<p>Usually form updated listener is only needed when the form is being used in frontend, so that you can trigger an UI rerender when form is updated.</p>
+<p>Form updated listener is needed when the form is being used in frontend, so that you can trigger an UI rerender when form is updated.</p>
 
 <a href="#example-react" id="example-react" style="color: inherit; text-decoration: none;">
   <h3><strong>Example (React)</strong></h3>
@@ -135,8 +135,8 @@
 <br />
 
 
-<a href="#construct-a-form-with-configs-amp-validators" id="construct-a-form-with-configs-amp-validators" style="color: inherit; text-decoration: none;">
-  <h1><strong>Construct a Form with Configs &amp; Validators</strong></h1>
+<a href="#construct-a-form" id="construct-a-form" style="color: inherit; text-decoration: none;">
+  <h1><strong>Construct a Form</strong></h1>
 </a>
 <pre><code class="language-javascript"><span class="hl-4">const</span><span class="hl-1"> </span><span class="hl-5">form</span><span class="hl-1"> = </span><span class="hl-4">new</span><span class="hl-1"> </span><span class="hl-6">Form</span><span class="hl-1">(</span><span class="hl-0">configs</span><span class="hl-1">, { </span><span class="hl-0">validators</span><span class="hl-1">, </span><span class="hl-0">onFormUpdate</span><span class="hl-1"> });</span>
 </code></pre>
@@ -197,24 +197,36 @@
 <br />
 
 
-<a href="#validate-and-persist-the-answers" id="validate-and-persist-the-answers" style="color: inherit; text-decoration: none;">
-  <h1><strong>Validate and Persist the Answers</strong></h1>
+<a href="#validate-in-frontend" id="validate-in-frontend" style="color: inherit; text-decoration: none;">
+  <h1><strong>Validate in Frontend</strong></h1>
 </a>
-<p>Use <code>validate</code> method to make sure that all the answers are validated.</p>
-<p>Once the form is clean, use <code>getValidatedAnswers</code> method to get all answers from the form.</p>
+<p>Use <code>validate</code> method to trigger validation for the entire form.</p>
+<p>Use <code>isValidating</code> &amp; <code>isClean</code> methods to get the state of form validation.
+E.g. you can disable a button if <code>isValidating</code> is <code>true</code> or <code>isClean</code> is <code>false</code>.</p>
+
+<a href="#example-react-2" id="example-react-2" style="color: inherit; text-decoration: none;">
+  <h3><strong>Example (React)</strong></h3>
+</a>
+<pre><code class="language-javascript"><span class="hl-4">const</span><span class="hl-1"> </span><span class="hl-6">save</span><span class="hl-1"> = () </span><span class="hl-4">=&gt;</span><span class="hl-1"> {</span><br/><span class="hl-1">  </span><span class="hl-2">if</span><span class="hl-1"> (</span><span class="hl-0">form</span><span class="hl-1">.</span><span class="hl-6">isValidating</span><span class="hl-1">() || !</span><span class="hl-0">form</span><span class="hl-1">.</span><span class="hl-6">isClean</span><span class="hl-1">()) {</span><br/><span class="hl-1">    </span><span class="hl-6">alert</span><span class="hl-1">(</span><span class="hl-3">&#39;Please try again.&#39;</span><span class="hl-1">)</span><br/><span class="hl-1">  }</span><br/><span class="hl-1">}</span><br/><br/><span class="hl-10">&lt;</span><span class="hl-9">Button</span><span class="hl-1"> </span><span class="hl-12">onClick</span><span class="hl-1">=</span><span class="hl-4">{</span><span class="hl-0">save</span><span class="hl-4">}</span><span class="hl-10">&gt;</span><span class="hl-1">Save</span><span class="hl-10">&lt;/</span><span class="hl-9">Button</span><span class="hl-10">&gt;</span>
+</code></pre>
+
+<a href="#persist-the-answers" id="persist-the-answers" style="color: inherit; text-decoration: none;">
+  <h1><strong>Persist the Answers</strong></h1>
+</a>
+<p>Use <code>validateAndGetAnswers</code> method to get the final validated answers.</p>
 <p>You can then store the answers to database or send it to backend via API.</p>
 
 <a href="#example-frontend-1" id="example-frontend-1" style="color: inherit; text-decoration: none;">
   <h3><strong>Example (Frontend)</strong></h3>
 </a>
-<pre><code class="language-javascript"><span class="hl-4">const</span><span class="hl-1"> </span><span class="hl-5">valid</span><span class="hl-1"> = </span><span class="hl-2">await</span><span class="hl-1"> </span><span class="hl-0">form</span><span class="hl-1">.</span><span class="hl-6">validate</span><span class="hl-1">();</span><br/><br/><span class="hl-2">if</span><span class="hl-1"> (!</span><span class="hl-0">valid</span><span class="hl-1">) {</span><br/><span class="hl-1">  </span><span class="hl-6">alert</span><span class="hl-1">(</span><span class="hl-3">&#39;There are some invalid answers.&#39;</span><span class="hl-1">);</span><br/><span class="hl-1">  </span><span class="hl-2">return</span><span class="hl-1">;</span><br/><span class="hl-1">}</span><br/><br/><span class="hl-2">await</span><span class="hl-1"> ... </span><span class="hl-13">// Call API to send the answers to backend</span>
+<pre><code class="language-javascript"><span class="hl-4">const</span><span class="hl-1"> </span><span class="hl-5">answers</span><span class="hl-1"> = </span><span class="hl-2">await</span><span class="hl-1"> </span><span class="hl-0">form</span><span class="hl-1">.</span><span class="hl-6">validateAndGetAnswers</span><span class="hl-1">();</span><br/><br/><span class="hl-2">if</span><span class="hl-1"> (!</span><span class="hl-0">answers</span><span class="hl-1">) {</span><br/><span class="hl-1">  </span><span class="hl-6">alert</span><span class="hl-1">(</span><span class="hl-3">&#39;There are some invalid answers.&#39;</span><span class="hl-1">);</span><br/><span class="hl-1">  </span><span class="hl-2">return</span><span class="hl-1">;</span><br/><span class="hl-1">}</span><br/><br/><span class="hl-2">await</span><span class="hl-1"> ... </span><span class="hl-13">// Call API to send the answers to backend</span>
 </code></pre>
-<p>If you are sending the answers from frontend to backend, backend can construct the form using the same configs, import the answers, and call <code>validate</code> method again to revalidate the answers from frontend before you save them into database.</p>
+<p>If you are sending the answers from frontend to backend, backend can construct the form using the same configs, import the answers, and call <code>validateAndGetAnswers</code> method again to revalidate the answers from frontend before you save them into database.</p>
 
 <a href="#example-backend-api" id="example-backend-api" style="color: inherit; text-decoration: none;">
   <h3><strong>Example (Backend API)</strong></h3>
 </a>
-<pre><code class="language-javascript"><span class="hl-4">const</span><span class="hl-1"> </span><span class="hl-5">answers</span><span class="hl-1"> = </span><span class="hl-0">req</span><span class="hl-1">.</span><span class="hl-0">body</span><span class="hl-1">;</span><br/><span class="hl-0">form</span><span class="hl-1">.</span><span class="hl-6">importAnswers</span><span class="hl-1">(</span><span class="hl-0">answers</span><span class="hl-1">);</span><br/><span class="hl-4">const</span><span class="hl-1"> </span><span class="hl-5">valid</span><span class="hl-1"> = </span><span class="hl-2">await</span><span class="hl-1"> </span><span class="hl-0">form</span><span class="hl-1">.</span><span class="hl-6">validate</span><span class="hl-1">();</span><br/><br/><span class="hl-2">if</span><span class="hl-1"> (!</span><span class="hl-0">valid</span><span class="hl-1">) {</span><br/><span class="hl-1">  </span><span class="hl-0">res</span><span class="hl-1">.</span><span class="hl-6">status</span><span class="hl-1">(</span><span class="hl-8">400</span><span class="hl-1">);</span><br/><span class="hl-1">  </span><span class="hl-0">res</span><span class="hl-1">.</span><span class="hl-6">json</span><span class="hl-1">({ </span><span class="hl-0">error:</span><span class="hl-1"> </span><span class="hl-3">&#39;There are some invalid answers.&#39;</span><span class="hl-1"> });</span><br/><span class="hl-1">  </span><span class="hl-0">res</span><span class="hl-1">.</span><span class="hl-6">end</span><span class="hl-1">();</span><br/><span class="hl-1">  </span><span class="hl-2">return</span><span class="hl-1">;</span><br/><span class="hl-1">}</span><br/><br/><span class="hl-2">await</span><span class="hl-1"> ... </span><span class="hl-13">// Save the answers to database</span><br/><br/><span class="hl-0">res</span><span class="hl-1">.</span><span class="hl-6">status</span><span class="hl-1">(</span><span class="hl-8">200</span><span class="hl-1">);</span><br/><span class="hl-0">res</span><span class="hl-1">.</span><span class="hl-6">end</span><span class="hl-1">();</span>
+<pre><code class="language-javascript"><span class="hl-4">const</span><span class="hl-1"> </span><span class="hl-5">answers</span><span class="hl-1"> = </span><span class="hl-0">req</span><span class="hl-1">.</span><span class="hl-0">body</span><span class="hl-1">;</span><br/><span class="hl-0">form</span><span class="hl-1">.</span><span class="hl-6">importAnswers</span><span class="hl-1">(</span><span class="hl-0">answers</span><span class="hl-1">);</span><br/><span class="hl-4">const</span><span class="hl-1"> </span><span class="hl-5">valid</span><span class="hl-1"> = </span><span class="hl-2">await</span><span class="hl-1"> </span><span class="hl-0">form</span><span class="hl-1">.</span><span class="hl-6">validateAndGetAnswers</span><span class="hl-1">();</span><br/><br/><span class="hl-2">if</span><span class="hl-1"> (!</span><span class="hl-0">valid</span><span class="hl-1">) {</span><br/><span class="hl-1">  </span><span class="hl-0">res</span><span class="hl-1">.</span><span class="hl-6">status</span><span class="hl-1">(</span><span class="hl-8">400</span><span class="hl-1">);</span><br/><span class="hl-1">  </span><span class="hl-0">res</span><span class="hl-1">.</span><span class="hl-6">json</span><span class="hl-1">({ </span><span class="hl-0">error:</span><span class="hl-1"> </span><span class="hl-3">&#39;There are some invalid answers.&#39;</span><span class="hl-1"> });</span><br/><span class="hl-1">  </span><span class="hl-0">res</span><span class="hl-1">.</span><span class="hl-6">end</span><span class="hl-1">();</span><br/><span class="hl-1">  </span><span class="hl-2">return</span><span class="hl-1">;</span><br/><span class="hl-1">}</span><br/><br/><span class="hl-2">await</span><span class="hl-1"> ... </span><span class="hl-13">// Save the answers to database</span><br/><br/><span class="hl-0">res</span><span class="hl-1">.</span><span class="hl-6">status</span><span class="hl-1">(</span><span class="hl-8">200</span><span class="hl-1">);</span><br/><span class="hl-0">res</span><span class="hl-1">.</span><span class="hl-6">end</span><span class="hl-1">();</span>
 </code></pre>
 <br />
 
