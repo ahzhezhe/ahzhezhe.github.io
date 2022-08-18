@@ -7,3 +7,5 @@
 [async-utility](https://www.npmjs.com/package/async-utility)
 
 [onemapsg](https://www.npmjs.com/package/onemapsg)
+
+[ndi-login](https://www.npmjs.com/package/ndi-login)
