@@ -4,7 +4,7 @@
 
 [form-studio](https://www.npmjs.com/package/form-studio)
 
-[dependency-injection-ts](https://www.npmjs.com/package/dependency-injection-ts)
+[tsinject](https://www.npmjs.com/package/tsinject)
 
 [async-utility](https://www.npmjs.com/package/async-utility)
 
